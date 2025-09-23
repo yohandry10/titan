@@ -10,20 +10,13 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 50)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)
-  }
+  const toggleMobileMenu = () => setIsMobileMenuOpen(v => !v)
+  const closeMobileMenu = () => setIsMobileMenuOpen(false)
 
   const navItems = [
     { name: "Inicio", href: "#inicio" },
@@ -35,60 +28,67 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out animate-navbar-slide-in ${
-        isScrolled 
-          ? "navbar-glass-scrolled" 
-          : "navbar-glass"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out animate-navbar-slide-in ${isScrolled ? "navbar-glass-scrolled" : "navbar-glass"
+        }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-22 xl:h-24">
-          {/* Logo */}
-          <a href="#inicio" className="flex items-center group">
-            <div className="relative w-80 h-20 sm:w-96 sm:h-24 md:w-[26rem] md:h-28 lg:w-[32rem] lg:h-32 xl:w-[36rem] xl:h-36 transition-transform duration-300 group-hover:scale-105 z-10">
-              <Image 
-                src="/logo.png" 
-                alt="Titan Soluciones" 
+      {/* Ancho completo sin padding lateral para poder colgar el logo */}
+      <div className="w-full max-w-none px-0">
+        {/* Contenedor relativo para centrar el bloque de enlaces por viewport */}
+        <div className="relative flex items-center h-16 sm:h-18 md:h-20 lg:h-22 xl:h-24">
+          {/* LOGO: pegado a la IZQUIERDA con margen negativo responsivo */}
+          <a
+            href="#inicio"
+            className="flex items-center group ml-[-32px] sm:ml-[-48px] md:ml-[-64px] lg:ml-[-72px] xl:ml-[-88px]"
+          >
+            <div className="relative w-96 h-24 sm:w-[32rem] sm:h-28 md:w-[40rem] md:h-32 lg:w-[48rem] lg:h-36 xl:w-[56rem] xl:h-40 transition-transform duration-300 group-hover:scale-105 z-10">
+              <Image
+                src="/logo.png"
+                alt="Titan Soluciones"
                 fill
-                sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 416px, (max-width: 1280px) 512px, 576px"
+                sizes="(max-width: 640px) 512px, (max-width: 768px) 640px, (max-width: 1024px) 768px, (max-width: 1280px) 896px, 1024px"
                 className="object-contain transition-all duration-300 group-hover:brightness-110"
-                priority 
+                priority
               />
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-10">
-            {navItems.map((item, index) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className={`${isScrolled ? 'text-[#3f4e55]' : 'text-[#3f4e55]'} hover:text-primary transition-all duration-300 relative group font-medium text-lg xl:text-xl transform hover:scale-105`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
-                <span className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
-              </a>
-            ))}
+          {/* ENLACES (ESCRITORIO): centrados respecto al VIEWPORT */}
+          <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[11]">
+            <div className="flex items-center justify-center space-x-8 xl:space-x-10">
+              {navItems.map((item, index) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`${isScrolled ? "text-[#3f4e55]" : "text-[#3f4e55]"
+                    } hover:text-primary transition-all duration-300 relative group font-medium text-lg xl:text-xl`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="hidden xl:flex items-center space-x-4">
-            <div className={`flex items-center space-x-2 text-base xl:text-lg ${isScrolled ? 'text-[#3f4e55]' : 'text-[#3f4e55]'}`}>
-              <Phone className="w-4 h-4 xl:w-5 xl:h-5" />
-              <span className="hidden 2xl:inline">+51 992 027 156</span>
-              <span className="2xl:hidden">+51 992 027 156</span>
+          {/* CONTACTO: anclado a la DERECHA, no afecta el centrado */}
+          <div className="hidden xl:flex items-center space-x-4 ml-auto pr-4">
+            <div
+              className={`flex items-center space-x-2 text-sm xl:text-base ${isScrolled ? "text-[#3f4e55]" : "text-[#3f4e55]"
+                } whitespace-nowrap`}
+            >
+              <Phone className="w-4 h-4 xl:w-5 xl:h-5 flex-shrink-0" />
+              <span>+51 992 027 156</span>
             </div>
-            <Button className="hover-glow px-4 py-2 xl:px-6 xl:py-3 text-sm xl:text-lg relative overflow-hidden group">
+            <Button className="hover-glow px-4 py-2 xl:px-6 xl:py-3 text-sm xl:text-base relative overflow-hidden group whitespace-nowrap">
               <span className="relative z-10">Cotizar</span>
               <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="lg:hidden p-2 text-[#3f4e55] relative group transition-all duration-300 hover:bg-primary/10 rounded-lg" 
+          {/* BOTÓN MOBILE */}
+          <button
+            className="lg:hidden p-2 text-[#3f4e55] relative group transition-all duration-300 hover:bg-primary/10 rounded-lg ml-auto mr-2"
             onClick={toggleMobileMenu}
           >
             <div className="relative">
@@ -101,18 +101,17 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* OVERLAY MOBILE */}
         {isMobileMenuOpen && (
-          <div 
+          <div
             className="lg:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-[9998]"
             onClick={closeMobileMenu}
           />
         )}
 
-        {/* Mobile Menu */}
+        {/* MENÚ MOBILE */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-16 sm:top-18 md:top-20 lg:top-22 xl:top-24 left-0 right-0 mobile-menu-glass z-[9999] animate-menu-slide-in">
-            {/* Additional solid background layer */}
             <div className="absolute inset-0 bg-white/95"></div>
             <div className="relative px-4 py-6 space-y-4">
               {navItems.map((item, index) => (
@@ -126,7 +125,10 @@ export default function Navbar() {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4 border-t border-border animate-menu-item-slide-in" style={{ animationDelay: '0.5s' }}>
+              <div
+                className="pt-4 border-t border-border animate-menu-item-slide-in"
+                style={{ animationDelay: "0.5s" }}
+              >
                 <div className="flex items-center space-x-2 text-sm text-[#3f4e55] mb-3">
                   <Phone className="w-4 h-4" />
                   <span>+51 992 027 156</span>

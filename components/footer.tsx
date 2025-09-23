@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="text-center mb-6">
           <div className="relative w-48 h-16 sm:w-56 sm:h-20 md:w-64 md:h-24 lg:w-72 lg:h-28 xl:w-80 xl:h-32 mx-auto mb-3">
             <Image 
-              src="/logo.png" 
+              src="/footerlogo.png" 
               alt="Titan Soluciones" 
               fill
               sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, (max-width: 1280px) 288px, 320px"
@@ -85,7 +85,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/proyectos" className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base">
+                <a href="/servicios" className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base">
                   Proyectos
                 </a>
               </li>

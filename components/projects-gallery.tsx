@@ -105,7 +105,7 @@ export default function ProjectsGallery() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Nuestros <span className="text-primary">Proyectos</span>
+            Nuestros <span className="text-primary">Servicios</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Descubre algunos de nuestros proyectos más destacados que demuestran nuestra experiencia y compromiso con la
@@ -189,9 +189,8 @@ export default function ProjectsGallery() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-primary" : "bg-muted-foreground/30"
-                }`}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${index === currentIndex ? "bg-primary" : "bg-muted-foreground/30"
+                  }`}
               />
             ))}
           </div>
@@ -201,7 +200,7 @@ export default function ProjectsGallery() {
         <div className="text-center mt-12 sm:mt-16 scroll-reveal">
           <Link href="/proyectos">
             <Button size="lg" className="hover-glow">
-              Ver Todos los Proyectos
+              Ver Todos los Servicios
               <ExternalLink className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
           </Link>

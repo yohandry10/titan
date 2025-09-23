@@ -101,7 +101,7 @@ export default function ProyectosPage() {
               Volver al inicio
             </Link>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Nuestros <span className="text-primary">Proyectos</span>
+              Nuestros <span className="text-primary">Servicios</span>
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Descubre la excelencia en cada uno de nuestros proyectos de construcción, estructuras metálicas y

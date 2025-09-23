@@ -4,99 +4,93 @@ import { useState, useEffect } from 'react'
 import { ChevronRight, Play, Pause, ArrowRight, CheckCircle, Star, Award, Shield, Clock } from 'lucide-react'
 
 export default function ServiciosPage() {
-  const [activeService, setActiveService] = useState(0)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  const services = [
+  const projects = [
     {
-      id: 'obras-civiles',
-      title: 'Proyectos de Obras Civiles',
-      subtitle: 'Construcción de infraestructura civil con los más altos estándares de calidad',
-      description: 'Desarrollamos infraestructura civil completa con tecnología de vanguardia y procesos optimizados que garantizan resultados excepcionales en cada proyecto.',
-      icon: '🏗️',
-      color: 'from-blue-600 to-blue-800',
-      images: [
-        '/carretera-asfaltado.jpg',
-        '/compactacion-de-terraplen-276316.webp',
-        '/Mejoramiento-de-carretera-obras-compressed.jpg.webp',
-        '/reservorio.jpg',
-        '/complejo.jpg',
-        '/agua.jpg',
-        '/alcantarillado.jpg',
-        '/civil-construction-projects.jpg'
-      ],
-      services: [
-        'Excavaciones y movimiento de tierras',
-        'Habilitación y mantenimiento de vías de acceso',
-        'Construcción de vías de acceso (vehiculares, vías carrozables y peatonales)',
-        'Construcción de sistemas de evacuación de aguas pluviales a canal abierto',
-        'Construcción de terraplenes y plataformas',
-        'Construcción de lozas y veredas de concreto',
-        'Alcantarillado y saneamiento',
-        'Construcción de reservorios y mini represas',
-        'Construcción de complejos deportivos y recreativos'
-      ]
+      id: 1,
+      empresa: 'CONSORCIO PIRAMIDE',
+      servicio: 'CONSTRUCCION DE INFRAESTRUCTURA VIAL EN LA ASOCIACION DE VIVIENDA LA PRADERA III Y IV ETAPA DISTRITO CORONEL GREGORIO ALBARRACIN LANCHIPA-TACNA',
+      periodo: 'Marzo – Setiembre 2016',
+      imagen: '/carretera-asfaltado.jpg'
     },
     {
-      id: 'estructuras-metalicas',
-      title: 'Estructuras Metálicas',
-      subtitle: 'Diseño, fabricación y montaje de estructuras metálicas industriales',
-      description: 'Especialistas en ingeniería de precisión con soldadura certificada y montaje de estructuras industriales de gran envergadura.',
-      icon: '⚙️',
-      color: 'from-orange-600 to-red-600',
-      images: [
-        '/estructura.png',
-        '/estructura11.png',
-        '/metalica.png',
-        '/fabricacion.png',
-        '/Montaje.jpg',
-        '/escalera.png',
-        '/nave.png',
-        '/INDUSTRIAL.png',
-        '/metal.png'
-      ],
-      services: [
-        'Ingeniería de detalle y planos de fabricación',
-        'Cálculo y diseño de estructuras',
-        'Montaje y alineamiento de estructuras',
-        'Fabricación y montaje de estructuras',
-        'Fabricación e instalación de escaleras industriales, vigas, techos y pórticos',
-        'Fabricación de chutes, guardas y coberturas',
-        'Construcción y montaje de naves industriales',
-        'Soldadura especializada y certificada',
-        'Reforzamiento de estructuras existentes'
-      ]
+      id: 2,
+      empresa: 'CONSORCIO PUENTE ANTACCARA',
+      servicio: 'CREACION DEL PUENTE CARROZABLE ANTACCARA EN EL SECTOR DE HUAYLLUMAYO DE LA COMUNIDAD CAMPESINA DE ALTO AYRACCOLLANA, DISTRITO DE COPORAQUE – ESPINAR, CUSCO',
+      periodo: 'Setiembre 2015',
+      imagen: '/Mejoramiento-de-carretera-obras-compressed.jpg.webp'
     },
     {
-      id: 'servicios-miscelaneos',
-      title: 'Servicios Misceláneos',
-      subtitle: 'Servicios complementarios de construcción y mantenimiento',
-      description: 'Soluciones integrales que cubren todas las necesidades complementarias de tu proyecto con la misma calidad y profesionalismo.',
-      icon: '🔧',
-      color: 'from-gray-600 to-gray-800',
-      images: [
-        '/drywall.jpg',
-        '/arbañileria.png',
-        '/electrica.png',
-        '/anaqueles.png',
-        '/lona.png',
-        '/geomembrana.png',
-        '/mantenimiento.png',
-        '/elec.png'
-      ],
-      services: [
-        'Trabajos misceláneos de obras civiles y obras eléctricas',
-        'Trabajos de albañilería, carpintería y gasfitería',
-        'Trabajos de instalación de pisos y montaje de techos',
-        'Mantenimiento de viviendas, campamentos, oficinas y almacenes',
-        'Mantenimiento preventivo, correctivo y renovación de infraestructuras (interiores y exteriores)',
-        'Obras eléctricas para proyectos de sostenimiento',
-        'Instalación de coberturas de lona',
-        'Sistemas de drywall y tabiquería',
-        'Armado e instalación de anaqueles',
-        'Trabajos en geomembrana'
-      ]
+      id: 3,
+      empresa: 'MUNICIPALIDAD DISTRITAL DE HUAMBO',
+      servicio: 'SERVICIO DE REFORMULACION DE EXPEDIENTE TECNICO MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN EL CAMINO VECINAL KM 4+404 DE LA CARRETERA YANACOTO SAJARHUA - DISTRITO DE HUAMBO, PROVINCIA DE CAYLLOMA, AREQUIPA.',
+      ubicacion: 'DISTRITO DE HUAMBO, PROVINCIA DE CAYLLOMA, AREQUIPA',
+      imagen: '/civil-construction-projects.jpg'
+    },
+    {
+      id: 4,
+      empresa: 'GOBIERNO REGIONAL DE AREQUIPA',
+      servicio: 'SERVICIO DE ELABORACION DEL EXPEDIENTE TECNICO "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN EL TRAMO 2- 358 CALLE PRINCIPAL S/N DESDE EL ARCO HASTA EL INICIO DE TROCHA, DEL DISTRITO DE POCSI, PROVINCIA AREQUIPA, REGION AREQUIPA"',
+      ubicacion: 'DISTRITO DE POCSI, AREQUIPA, REGION AREQUIPA',
+      periodo: 'Octubre 2018',
+      imagen: '/agua.jpg'
+    },
+    {
+      id: 5,
+      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      servicio: 'SERVICIO DE SOLDADURA PARA REPARACION DE JUEGOS INFANTILES, CERCO Y PUERTAS METALICAS EN PARQUES CMT 8-10 P.J.ISRAEL, PARQUE ENTRE LA CALLE VIRGEN DE CHAPI MZ"N" CIUDAD BLANCA,PARQUE DEL NIÑO (LOS SENTIDOS)INCLUYE TODOS LOS MAT. METAL,SOLDAD.Y OTROS',
+      ubicacion: 'AREQUIPA',
+      periodo: 'Octubre 2018',
+      imagen: '/metalica.png'
+    },
+    {
+      id: 6,
+      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      servicio: 'SERVICIO MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE JUEGOS INFANTILES EN FIBRA DE VIDRIO EN PARQUES Y JARDINES. SEGUN ORDEN DE SERVICIO 574.',
+      ubicacion: 'AREQUIPA',
+      periodo: 'Setiembre 2018',
+      imagen: '/mantenimiento.png'
+    },
+    {
+      id: 7,
+      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      servicio: 'SERVICIO DE PINTADO DE AMBIENTES, SERVICIO DE PINTADO DEL MANTENIMIENTO DENOMINADO MANTENIMIENTO DEL ESTADIO RECREACIONAL DEL NIÑO DEL DISTRITO DE PAUCARPATA, SEGUN ORDEN DE SERVICIO NRO 705.',
+      ubicacion: 'AREQUIPA',
+      periodo: 'Octubre 2024',
+      imagen: '/arbañileria.png'
+    },
+    {
+      id: 8,
+      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      servicio: 'SERVICIO DE MANTENIMIENTO DE CESPED NATURAL,SERVICIO DE ASENTADO DE BLOCK GRASS NATURAL DEL MANTENIMIENTO Y ACONDICIONAMIENTO DEL ESTADIO CIUDAD BLANCA DEL DISTRITO DE PAUCARPATA, SEGUN ORDEN DE SERVICIO NRO 703.',
+      ubicacion: 'AREQUIPA',
+      periodo: 'Octubre 2018',
+      imagen: '/complejo.jpg'
+    },
+    {
+      id: 9,
+      empresa: 'COSAPI S.A.',
+      servicio: 'SERVICIO DE ALQUILER DE GRUA HIDRAULICA ARTICULADA SOBRE CAMION 6X4 DE 14 TN. 16 HRM PRECIO UNIT S/172.',
+      ubicacion: 'AREQUIPA',
+      periodo: 'Setiembre 2018',
+      imagen: '/estructura11.png'
+    },
+    {
+      id: 10,
+      empresa: 'COSAPI S.A.',
+      servicio: 'SUMINISTRO E INSTALACION DE IMPERMEABILIZANTE',
+      ubicacion: 'AREQUIPA',
+      periodo: 'Abril 2018',
+      imagen: '/geomembrana.png'
+    },
+    {
+      id: 11,
+      empresa: 'COSAPI S.A.',
+      servicio: 'SERVICIO DE MOVIMIENTO DE TIERRA',
+      ubicacion: 'AREQUIPA',
+      periodo: 'Abril 2018',
+      imagen: '/compactacion-de-terraplen-276316.webp'
     }
   ]
 
@@ -108,14 +102,7 @@ export default function ServiciosPage() {
     { icon: Star, title: 'Excelencia Técnica', description: 'Equipo de ingenieros especializados' }
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => 
-        (prev + 1) % services[activeService].images.length
-      )
-    }, 4000)
-    return () => clearInterval(interval)
-  }, [activeService, services])
+
 
   const handleWhatsAppClick = (service?: string) => {
     const message = service 
@@ -150,9 +137,9 @@ export default function ServiciosPage() {
           </div>
           
           <h1 className="text-7xl md:text-8xl font-bold mb-8 leading-tight">
-            Servicios de
+            Nuestros Proyectos
             <span className="block bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-              Clase Mundial
+              Especializados
             </span>
           </h1>
           
@@ -173,7 +160,7 @@ export default function ServiciosPage() {
               onClick={() => document.getElementById('servicios-detalle')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-10 py-5 text-xl rounded-full font-semibold hover:bg-white/20 transition-all duration-300 flex items-center"
             >
-              Explorar Servicios
+              Explorar Proyectos
               <ChevronRight className="w-6 h-6 ml-2" />
             </button>
           </div>
@@ -188,109 +175,109 @@ export default function ServiciosPage() {
       </div>
 
 
-      {/* Interactive Services Section */}
+      {/* Projects Section */}
       <div id="servicios-detalle" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-black mb-6">
-              Nuestras <span className="text-orange-500">Especialidades</span>
+            <h2 className="text-6xl font-bold text-black mb-6">
+              Proyectos <span className="text-orange-500">Ejecutados</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Cada servicio está respaldado por años de experiencia, tecnología de vanguardia 
-              y un equipo de profesionales comprometidos con la excelencia
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
+              Cada proyecto refleja nuestro compromiso con la excelencia, calidad y cumplimiento de plazos
             </p>
-          </div>
-
-          {/* Service Navigation */}
-          <div className="flex flex-wrap justify-center mb-12 gap-4">
-            {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setActiveService(index)
-                  setCurrentImageIndex(0)
-                }}
-                className={`px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                  activeService === index
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-2xl'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow-lg'
-                }`}
-              >
-                <span className="mr-2">{service.icon}</span>
-                {service.title}
-              </button>
-            ))}
-          </div>
-
-          {/* Active Service Display */}
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="flex flex-col lg:flex-row lg:h-[500px]">
-              {/* Image Gallery */}
-              <div className="lg:w-1/2 relative h-[400px] lg:h-full service-image-container">
+            
+            {/* Featured Images */}
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src={services[activeService].images[currentImageIndex]}
-                  alt={services[activeService].title}
-                  className="service-image"
-                  onError={(e) => {
-                    console.log('Error loading image:', services[activeService].images[currentImageIndex]);
-                    e.currentTarget.src = '/placeholder.svg';
-                  }}
+                  src="/carretera-asfaltado.jpg"
+                  alt="Infraestructura Vial"
+                  className="w-full h-full object-cover"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-r ${services[activeService].color} opacity-20`}></div>
-                
-                {/* Image Navigation Dots */}
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {services[activeService].images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        currentImageIndex === index ? 'bg-white scale-125' : 'bg-white/50'
-                      }`}
-                    />
-                  ))}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Infraestructura Vial</h3>
+                  <p className="text-sm opacity-90">Construcción y mejoramiento</p>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="lg:w-1/2 lg:h-full p-6 lg:p-8 flex flex-col justify-center overflow-hidden">
-                <div className="mb-4">
-                  <h3 className="text-3xl font-bold text-black mb-2">
-                    {services[activeService].title}
-                  </h3>
-                  <p className="text-lg text-orange-600 font-semibold mb-3">
-                    {services[activeService].subtitle}
-                  </p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                    {services[activeService].description}
-                  </p>
+              <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/estructura11.png"
+                  alt="Estructuras Metálicas"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Estructuras Metálicas</h3>
+                  <p className="text-sm opacity-90">Fabricación y montaje</p>
                 </div>
+              </div>
+              <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/mantenimiento.png"
+                  alt="Servicios Especializados"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-xl font-bold">Servicios Especializados</h3>
+                  <p className="text-sm opacity-90">Mantenimiento y reparación</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                {/* Services List */}
-                <div className="space-y-2 mb-4">
-                  <h4 className="text-lg font-bold text-black mb-2">Servicios Incluidos:</h4>
-                  <div className="grid gap-1 max-h-32 overflow-y-auto pr-2">
-                    {services[activeService].services.slice(0, 5).map((service, index) => (
-                      <div key={index} className="flex items-start">
-                        <CheckCircle className="w-3 h-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-xs leading-tight">
-                          {service}
-                        </span>
-                      </div>
-                    ))}
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <div key={project.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                {/* Project Image */}
+                <div className="relative h-80 overflow-hidden">
+                  <img 
+                    src={project.imagen}
+                    alt={`Proyecto ${project.empresa}`}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    onError={(e) => {
+                      e.currentTarget.src = '/placeholder.svg';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Proyecto #{project.id}
+                    </span>
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <button 
-                  onClick={() => handleWhatsAppClick(services[activeService].title)}
-                  className={`w-full bg-gradient-to-r ${services[activeService].color} text-white py-3 px-6 rounded-xl text-sm font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center mt-auto`}
-                >
-                  <span className="mr-2">💬</span>
-                  Solicitar Cotización
-                </button>
+                {/* Project Content */}
+                <div className="p-6">
+                  <div className="mb-4">
+                    <span className="text-lg font-bold text-orange-600 uppercase tracking-wide">EMPRESA/ENTIDAD:</span>
+                    <h3 className="text-xl font-bold text-gray-900 mt-2 leading-tight">{project.empresa}</h3>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <span className="text-lg font-bold text-orange-600 uppercase tracking-wide">SERVICIO:</span>
+                    <p className="text-base text-gray-800 leading-relaxed mt-2">{project.servicio}</p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4 mt-4">
+                    {project.ubicacion && (
+                      <div className="flex-1 min-w-0">
+                        <span className="text-sm font-bold text-orange-600 uppercase tracking-wide">UBICACIÓN:</span>
+                        <p className="text-base text-gray-700 mt-1">{project.ubicacion}</p>
+                      </div>
+                    )}
+                    {project.periodo && (
+                      <div className="flex-shrink-0">
+                        <span className="text-sm font-bold text-orange-600 uppercase tracking-wide">PERÍODO:</span>
+                        <p className="text-base font-semibold text-white mt-1 bg-orange-500 px-3 py-1 rounded-lg">{project.periodo}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -332,8 +319,16 @@ export default function ServiciosPage() {
       </div>
 
       {/* Features Section */}
-      <div className="py-20" style={{backgroundColor: '#2a313b'}}>
-        <div className="max-w-6xl mx-auto px-8">
+      <div 
+        className="py-20 bg-fixed bg-cover bg-center relative"
+        style={{ backgroundImage: 'url(/hero.jpg)' }}
+      >
+        {/* Overlay oscuro */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        
+        {/* Contenido con z-index para estar sobre el overlay */}
+        <div className="relative z-10">
+          <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6">
               ¿Por qué <span className="text-orange-500">TITAN Soluciones</span>?
@@ -376,6 +371,7 @@ export default function ServiciosPage() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
 
@@ -427,9 +423,7 @@ export default function ServiciosPage() {
       </div>
 
       {/* Final CTA Section */}
-      <div className="relative py-20 overflow-hidden" style={{backgroundColor: '#2a313b'}}>
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 via-red-600/20 to-orange-600/20"></div>
-        
+      <div className="relative py-20 overflow-hidden bg-gray-600">
         <div className="relative z-10 max-w-6xl mx-auto px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             ¿Listo para tu próximo
@@ -453,7 +447,7 @@ export default function ServiciosPage() {
               href="/proyectos" 
               className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-12 py-6 text-xl rounded-full font-bold hover:bg-white/20 transition-all duration-300 flex items-center"
             >
-              Ver Nuestros Proyectos
+              Ver Todos los Servicios
               <ArrowRight className="w-6 h-6 ml-3" />
             </a>
           </div>
@@ -474,11 +468,6 @@ export default function ServiciosPage() {
             </div>
           </div>
         </div>
-
-        {/* Animated Background Elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-500"></div>
       </div>
     </div>
   )

@@ -61,7 +61,7 @@ export default function SocialResponsibility() {
           {/* Content */}
           <div className="scroll-reveal">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-              Responsabilidad <span className="text-primary">Social</span>
+              Responsabilidad <span className="text-primary">Ambiental</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
               Dentro de los valores de nuestra empresa, encontramos la contribución del bienestar y desarrollo de las
@@ -114,12 +114,7 @@ export default function SocialResponsibility() {
               alt="Responsabilidad Social"
               className="w-full h-48 sm:h-64 md:h-96 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white">
-                <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2">Compromiso con la Comunidad</h3>
-                <p className="text-sm sm:text-lg opacity-90">Construyendo un futuro mejor juntos</p>
-              </div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
         </div>
       </div>

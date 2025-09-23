@@ -101,14 +101,18 @@ export default function ClientsSection() {
   }, [visibleCount, clients.length])
 
   return (
-    <section ref={sectionRef} className="py-20" style={{ backgroundColor: '#2a313b' }}>
+    <section 
+      ref={sectionRef} 
+      className="py-20"
+      style={{ backgroundColor: '#f8f9fa' }}
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Confían en <span className="text-primary">Nosotros</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Algunos de nuestros clientes que depositan su confianza en nosotros son empresas corporativas e
             instituciones gubernamentales de prestigio.
           </p>
@@ -135,7 +139,7 @@ export default function ClientsSection() {
                     <img
                       src={client.logo || "/placeholder.svg"}
                       alt={client.name}
-                      className="max-h-16 sm:max-h-20 md:max-h-24 w-auto opacity-100 transition-opacity duration-300"
+                      className="max-h-20 sm:max-h-24 md:max-h-28 lg:max-h-32 w-auto opacity-100 transition-opacity duration-300"
                     />
                   </div>
                 </div>
@@ -147,14 +151,14 @@ export default function ClientsSection() {
           <button
             onClick={prevSlide}
             aria-label="Anterior"
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-1.5 sm:p-2 rounded-full"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-primary/10 hover:bg-primary/20 text-primary p-1.5 sm:p-2 rounded-full"
           >
             <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={nextSlide}
             aria-label="Siguiente"
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-1.5 sm:p-2 rounded-full"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-primary/10 hover:bg-primary/20 text-primary p-1.5 sm:p-2 rounded-full"
           >
             <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>
@@ -166,7 +170,7 @@ export default function ClientsSection() {
               <span
                 key={index}
                 className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full ${
-                  Math.floor(currentIndex / visibleCount) === index ? "bg-primary" : "bg-white/30"
+                  Math.floor(currentIndex / visibleCount) === index ? "bg-primary" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -176,16 +180,15 @@ export default function ClientsSection() {
         {/* Testimonial */}
         <div className="mt-12 sm:mt-16 text-center scroll-reveal">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-8 md:p-12 shadow-lg">
-            <blockquote className="text-lg sm:text-xl md:text-2xl text-foreground font-medium mb-4 sm:mb-6 leading-relaxed">
-              "TITAN Soluciones ha demostrado ser un socio estratégico confiable, entregando proyectos de alta calidad
-              dentro de los plazos establecidos y cumpliendo con todos los estándares de seguridad requeridos."
+            <blockquote className="text-base sm:text-lg md:text-xl text-foreground font-medium mb-4 sm:mb-6 leading-relaxed">
+              "TITAN Soluciones ha demostrado ser un socio estratégico confiable, entregando proyectos de alta calidad dentro de los plazos establecidos y cumpliendo con todos los estándares de seguridad requeridos."
             </blockquote>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center">
                 <img
                   src="/arequiopa.png"
                   alt="Gobierno Regional de Arequipa"
-                  className="max-h-16 sm:max-h-20 w-auto object-contain"
+                  className="max-h-20 sm:max-h-24 md:max-h-28 w-auto object-contain"
                 />
               </div>
               <div className="text-center sm:text-left">

@@ -114,8 +114,8 @@ export default function ContactSection() {
       subtitle: "Habla con un experto ahora",
       action: "Llamar",
       details: ["+51 992 027 156", "+51 959 466 202"],
-      color: "bg-[#ff6b35]",
-      hoverColor: "hover:bg-[#e55a2b]"
+      color: "bg-[#2a313b]",
+      hoverColor: "hover:bg-[#1f252a]"
     },
     {
       icon: MessageCircle,
@@ -132,8 +132,8 @@ export default function ContactSection() {
       subtitle: "Documentación detallada",
       action: "Escribir",
       details: ["comercial@titansoluciones.com.pe"],
-      color: "bg-[#ff6b35]",
-      hoverColor: "hover:bg-[#e55a2b]"
+      color: "bg-[#2a313b]",
+      hoverColor: "hover:bg-[#1f252a]"
     }
   ]
 

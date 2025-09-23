@@ -149,14 +149,14 @@ export default function HeroSection() {
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/proyectos" className="w-full sm:w-auto">
+            <Link href="/servicios" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group bg-transparent w-full sm:w-auto"
               >
                 <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                Ver Proyectos
+                Ver Servicios
               </Button>
             </Link>
           </div>

@@ -38,7 +38,7 @@ export default function AboutSection() {
       id: "mision",
       title: "Misión",
       icon: Target,
-      content: "Crear soluciones objetivas con calidad y eficiencia mediante la reingeniería, priorizando el bienestar de los colaboradores y el desarrollo sostenible, generando compromiso con el medio ambiente y las comunidades.",
+      content: "Crear soluciones objetivas con calidad y eficiencia mediante la reingeniería. priorizando el bienestar de los colaboradores y el desarrollo sostenible, generando compromiso con el medio ambiente y las comunidades sin olvidar la seguridad de todas las personas relacionadas directa o indirectamente con nuestras actividades.",
       color: "from-[#2a313b]/5 to-[#2a313b]/10",
       iconColor: "text-primary"
     },
@@ -46,7 +46,7 @@ export default function AboutSection() {
       id: "vision", 
       title: "Visión",
       icon: Eye,
-      content: "Ser el mejor referente en el sector de minería, industria y construcción, reconocidos por nuestros clientes como la mejor opción, utilizando tecnología de vanguardia optimizando costos y procesos.",
+      content: "Ser el mejor referente en el sector de minería, industria y construcción siendo reconocidos por nuestros clientes como la mejor opción, utilizando tecnología de vanguardia optimizando costos y procesos; para mejorar la eficiencia de cada uno de nuestros proyectos.",
       color: "from-[#2a313b]/5 to-[#2a313b]/10",
       iconColor: "text-primary"
     },
@@ -54,7 +54,7 @@ export default function AboutSection() {
       id: "politicas",
       title: "Políticas",
       icon: Award,
-      content: "Nuestros lineamientos garantizan calidad mediante mejora continua, seguridad a través de prevención y capacitación, sostenibilidad ambiental con gestión responsable, y ética con transparencia absoluta.",
+      content: "• Política de calidad\n• Política de seguridad y salud en el trabajo\n• Política ambiental\n• Política de ética y antisoborno",
       color: "from-[#2a313b]/5 to-[#2a313b]/10", 
       iconColor: "text-primary"
     }
@@ -135,7 +135,15 @@ export default function AboutSection() {
                     </div>
                     <div className="text-center sm:text-left">
                       <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">{tabs[activeTab].title}</h3>
-                      <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{tabs[activeTab].content}</p>
+                      {tabs[activeTab].id === 'politicas' ? (
+                        <div className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                          {tabs[activeTab].content.split('\n').map((policy, index) => (
+                            <p key={index} className="mb-2">{policy}</p>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{tabs[activeTab].content}</p>
+                      )}
                     </div>
                   </div>
                 </div>

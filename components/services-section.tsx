@@ -101,7 +101,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-            Nuestros <span className="text-primary">Servicios</span>
+            Nuestros <span className="text-primary">Proyectos</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
             Ofrecemos soluciones integrales en ingeniería, construcción y mantenimiento para los sectores de minería,
@@ -144,7 +144,7 @@ export default function ServicesSection() {
                     </li>
                   )}
                 </ul>
-                <Link href="/servicios">
+                <Link href="/proyectos">
                   <Button
                     variant="outline"
                     className="w-full group-hover:bg-primary group-hover:text-white transition-colors bg-transparent text-sm sm:text-base"
@@ -169,7 +169,7 @@ export default function ServicesSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
               <Link href="/servicios" className="w-full sm:w-auto">
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 w-full sm:w-auto">
-                  Ver Todos los Servicios
+                  Ver Todos los Proyectos
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
               </Link>
@@ -179,7 +179,7 @@ export default function ServicesSection() {
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-primary bg-transparent w-full sm:w-auto"
                 >
-                  Ver Proyectos
+                  Ver Servicios
                 </Button>
               </Link>
             </div>

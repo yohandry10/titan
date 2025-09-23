@@ -497,10 +497,6 @@ export default function ContactSection() {
             <div className="absolute inset-0 bg-black/10"></div>
             <CardContent className="p-8 md:p-12 relative z-10">
               <div className="text-center">
-                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-                  <Award className="w-4 h-4" />
-                  +500 Proyectos Exitosos
-                </div>
                 <h3 className="text-3xl md:text-4xl font-bold mb-4">
                   ¿Listo para comenzar tu proyecto?
                 </h3>

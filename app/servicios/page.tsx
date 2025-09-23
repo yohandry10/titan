@@ -94,12 +94,6 @@ export default function ServiciosPage() {
     }
   ]
 
-  const stats = [
-    { number: '15+', label: 'Años de Experiencia', icon: '⏱️' },
-    { number: 'ISO', label: 'Certificaciones de Calidad', icon: '🏆' },
-    { number: '24/7', label: 'Soporte Técnico', icon: '🛠️' },
-    { number: '3', label: 'Áreas de Especialización', icon: '🎯' }
-  ]
 
   const features = [
     { icon: Award, title: 'Calidad Certificada', description: 'Estándares internacionales ISO' },
@@ -187,20 +181,6 @@ export default function ServiciosPage() {
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="py-20 bg-gradient-to-r from-gray-900 to-black">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-lg">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Interactive Services Section */}
       <div id="servicios-detalle" className="py-20 bg-gray-50">

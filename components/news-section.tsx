@@ -163,7 +163,7 @@ export default function NewsSection() {
             <TrendingUp className="w-4 h-4" />
             Últimas Actualizaciones
           </div>
-          <h2 className="text-4xl md:text-5xl font-medium text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6">
             Noticias y <span className="text-primary">Novedades</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -217,7 +217,7 @@ export default function NewsSection() {
 
                         {/* Contenido */}
                         <div className="p-8 lg:p-12 flex flex-col justify-center">
-                          <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4 leading-tight">
+                          <h3 className="text-2xl lg:text-3xl font-semibold text-foreground mb-4 leading-tight">
                             {news.title}
                           </h3>
                           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
@@ -281,7 +281,7 @@ export default function NewsSection() {
         {/* Noticias Recientes - Grid */}
         <div className="scroll-reveal">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-bold text-foreground">Información Adicional</h3>
+            <h3 className="text-2xl font-semibold text-foreground">Información Adicional</h3>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -302,7 +302,7 @@ export default function NewsSection() {
                       <Badge variant="secondary" className="mb-2 text-xs">
                         {news.category}
                       </Badge>
-                      <h4 className="font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
+                      <h4 className="font-medium text-foreground group-hover:text-primary transition-colors leading-tight">
                         {news.title}
                       </h4>
                     </div>
@@ -350,10 +350,10 @@ export default function NewsSection() {
             <div className="absolute inset-0 bg-black/10"></div>
             <CardContent className="p-8 md:p-12 relative z-10">
               <div className="text-center max-w-2xl mx-auto">
-                <h3 className="text-3xl font-bold mb-4">
+                <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
                   Mantente Informado
                 </h3>
-                <p className="text-xl opacity-90 mb-8">
+                <p className="text-lg sm:text-xl opacity-90 mb-6 sm:mb-8">
                   Suscríbete a nuestro boletín y recibe las últimas noticias, proyectos y oportunidades directamente en tu correo
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

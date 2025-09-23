@@ -104,7 +104,7 @@ export default function ProjectsGallery() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 sm:mb-6">
             Nuestros <span className="text-primary">Servicios</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
@@ -170,7 +170,7 @@ export default function ProjectsGallery() {
                           </div>
                         </div>
                         <CardContent className="p-4 sm:p-6 flex-1 flex flex-col">
-                          <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                          <h3 className="text-lg sm:text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                             {project.title}
                           </h3>
                           <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-1 line-clamp-3">{project.description}</p>

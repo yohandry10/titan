@@ -60,7 +60,7 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   className={`${isScrolled ? "text-[#3f4e55]" : "text-[#3f4e55]"
-                    } hover:text-primary transition-all duration-300 relative group font-medium text-lg xl:text-xl`}
+                    } hover:text-primary transition-all duration-300 relative group font-medium text-base sm:text-lg xl:text-xl`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
@@ -118,7 +118,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-foreground hover:text-primary transition-all duration-300 text-lg transform hover:translate-x-2 hover:scale-105 animate-menu-item-slide-in"
+                  className="block text-foreground hover:text-primary transition-all duration-300 text-base sm:text-lg transform hover:translate-x-2 hover:scale-105 animate-menu-item-slide-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={closeMobileMenu}
                 >

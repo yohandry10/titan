@@ -165,7 +165,7 @@ export default function ContactSection() {
             <Sparkles className="w-4 h-4" />
             Consulta Gratuita Disponible
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6">
             Transforma tu <span className="bg-gradient-to-r from-[#ff6b35] to-[#ff8c42] bg-clip-text text-transparent">visión</span> en realidad
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
@@ -180,7 +180,7 @@ export default function ContactSection() {
                   <benefit.icon className="w-5 h-5 text-[#ff6b35]" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-foreground">{benefit.title}</h4>
+                  <h4 className="font-medium text-foreground">{benefit.title}</h4>
                   <p className="text-sm text-muted-foreground">{benefit.description}</p>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function ContactSection() {
 
                 {/* Current Step Content */}
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
                     {consultationSteps[selectedStep].title}
                   </h3>
                   <p className="text-muted-foreground mb-6">
@@ -344,7 +344,7 @@ export default function ContactSection() {
                       </div>
                       
                       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6">
-                        <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <h4 className="font-medium text-foreground mb-3 flex items-center gap-2">
                           <Star className="w-5 h-5 text-primary" />
                           ¿Qué incluye tu consulta gratuita?
                         </h4>
@@ -408,7 +408,7 @@ export default function ContactSection() {
 
           {/* Contact Methods */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-foreground mb-4">¿Prefieres contacto directo?</h3>
+            <h3 className="text-lg sm:text-xl font-medium text-foreground mb-4">¿Prefieres contacto directo?</h3>
             {contactMethods.map((method, index) => (
               <Card key={method.title} className={`scroll-reveal hover-lift cursor-pointer transition-all duration-300 hover:scale-105 ${method.color} text-white hover:shadow-xl`} style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-4">
@@ -417,7 +417,7 @@ export default function ContactSection() {
                       <method.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold">{method.title}</h4>
+                      <h4 className="font-medium">{method.title}</h4>
                       <p className="text-sm opacity-90">{method.subtitle}</p>
                     </div>
                     <Button size="sm" variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
@@ -466,7 +466,7 @@ export default function ContactSection() {
                     <MapPin className="w-5 h-5 text-red-500" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Dirección</h4>
+                    <h4 className="font-medium text-foreground mb-1">Dirección</h4>
                     <p className="text-sm text-muted-foreground">Av. Fernandini 142 - Sachaca</p>
                     <p className="text-sm text-muted-foreground">Arequipa, Perú</p>
                   </div>
@@ -481,7 +481,7 @@ export default function ContactSection() {
                     <Clock className="w-5 h-5 text-purple-500" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Horarios</h4>
+                    <h4 className="font-medium text-foreground mb-1">Horarios</h4>
                     <p className="text-sm text-muted-foreground">Lun - Vie: 8:00 AM - 6:00 PM</p>
                     <p className="text-sm text-muted-foreground">Sáb: 8:00 AM - 1:00 PM</p>
                   </div>
@@ -497,10 +497,10 @@ export default function ContactSection() {
             <div className="absolute inset-0 bg-black/10"></div>
             <CardContent className="p-8 md:p-12 relative z-10">
               <div className="text-center">
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
                   ¿Listo para comenzar tu proyecto?
                 </h3>
-                <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 max-w-3xl mx-auto">
                   Únete a más de 500 clientes satisfechos que han confiado en TITAN Soluciones para sus proyectos más importantes.
                 </p>
                 

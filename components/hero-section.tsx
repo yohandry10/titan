@@ -117,7 +117,7 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 animate-fade-in-up"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white mb-4 sm:mb-6 animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
             Construimos el
@@ -131,7 +131,7 @@ export default function HeroSection() {
             style={{ animationDelay: "0.4s" }}
           >
             Somos una empresa dedicada a la prestación de servicios en los sectores de
-            <span className="text-primary font-semibold"> minería, construcción e industria</span>, cumpliendo con los
+            <span className="text-primary font-medium"> minería, construcción e industria</span>, cumpliendo con los
             más altos estándares de calidad y seguridad.
           </p>
 

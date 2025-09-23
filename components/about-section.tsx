@@ -88,7 +88,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 sm:mb-6">
             ¿Por qué elegir <span className="text-primary">TITAN</span>?
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
@@ -115,7 +115,7 @@ export default function AboutSection() {
                   >
                     <div className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-3">
                       <tab.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${activeTab === index ? tab.iconColor : "text-gray-400"}`} />
-                      <span className={`font-semibold text-sm sm:text-base ${activeTab === index ? "text-primary" : "text-gray-600"}`}>
+                      <span className={`font-medium text-sm sm:text-base ${activeTab === index ? "text-primary" : "text-gray-600"}`}>
                         {tab.title}
                       </span>
                     </div>
@@ -134,7 +134,7 @@ export default function AboutSection() {
                       })()}
                     </div>
                     <div className="text-center sm:text-left">
-                      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">{tabs[activeTab].title}</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-3">{tabs[activeTab].title}</h3>
                       {tabs[activeTab].id === 'politicas' ? (
                         <div className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                           {tabs[activeTab].content.split('\n').map((policy, index) => (
@@ -164,7 +164,7 @@ export default function AboutSection() {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
                   <value.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">{value.title}</h4>
+                <h4 className="text-lg sm:text-xl font-medium text-foreground mb-2 sm:mb-3">{value.title}</h4>
                 <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{value.description}</p>
               </CardContent>
             </Card>

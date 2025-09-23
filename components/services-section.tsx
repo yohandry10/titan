@@ -100,7 +100,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 sm:mb-6">
             Nuestros <span className="text-primary">Proyectos</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
@@ -161,7 +161,7 @@ export default function ServicesSection() {
         {/* CTA Section */}
         <div className="text-center scroll-reveal">
           <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 sm:p-8 md:p-12 text-white">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">¿Necesitas una cotización personalizada?</h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4">¿Necesitas una cotización personalizada?</h3>
             <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto px-4">
               Nuestro equipo de expertos está listo para evaluar tu proyecto y brindarte la mejor solución adaptada a
               tus necesidades.

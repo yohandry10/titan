@@ -21,7 +21,10 @@ export default function ServiciosPage() {
         '/compactacion-de-terraplen-276316.webp',
         '/Mejoramiento-de-carretera-obras-compressed.jpg.webp',
         '/reservorio.jpg',
-        '/complejo.jpg'
+        '/complejo.jpg',
+        '/agua.jpg',
+        '/alcantarillado.jpg',
+        '/civil-construction-projects.jpg'
       ],
       services: [
         'Excavaciones y movimiento de tierras',
@@ -49,7 +52,9 @@ export default function ServiciosPage() {
         '/fabricacion.png',
         '/Montaje.jpg',
         '/escalera.png',
-        '/nave.png'
+        '/nave.png',
+        '/INDUSTRIAL.png',
+        '/metal.png'
       ],
       services: [
         'Ingeniería de detalle y planos de fabricación',
@@ -77,7 +82,8 @@ export default function ServiciosPage() {
         '/anaqueles.png',
         '/lona.png',
         '/geomembrana.png',
-        '/mantenimiento.png'
+        '/mantenimiento.png',
+        '/elec.png'
       ],
       services: [
         'Trabajos misceláneos de obras civiles y obras eléctricas',
@@ -220,11 +226,15 @@ export default function ServiciosPage() {
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="flex flex-col lg:flex-row lg:h-[500px]">
               {/* Image Gallery */}
-              <div className="lg:w-1/2 relative h-[400px] lg:h-full">
+              <div className="lg:w-1/2 relative h-[400px] lg:h-full service-image-container">
                 <img 
                   src={services[activeService].images[currentImageIndex]}
                   alt={services[activeService].title}
-                  className="w-full h-full object-cover transition-opacity duration-1000"
+                  className="service-image"
+                  onError={(e) => {
+                    console.log('Error loading image:', services[activeService].images[currentImageIndex]);
+                    e.currentTarget.src = '/placeholder.svg';
+                  }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-r ${services[activeService].color} opacity-20`}></div>
                 

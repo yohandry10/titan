@@ -42,15 +42,15 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-22">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-22 xl:h-24">
           {/* Logo */}
           <a href="#inicio" className="flex items-center group">
-            <div className="relative w-72 h-20 sm:w-80 sm:h-24 md:w-96 md:h-28 lg:w-[28rem] lg:h-32 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-80 h-20 sm:w-96 sm:h-24 md:w-[26rem] md:h-28 lg:w-[32rem] lg:h-32 xl:w-[36rem] xl:h-36 transition-transform duration-300 group-hover:scale-105 z-10">
               <Image 
                 src="/logo.png" 
                 alt="Titan Soluciones" 
                 fill
-                sizes="(max-width: 640px) 288px, (max-width: 768px) 320px, (max-width: 1024px) 384px, 448px"
+                sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 416px, (max-width: 1280px) 512px, 576px"
                 className="object-contain transition-all duration-300 group-hover:brightness-110"
                 priority 
               />
@@ -111,7 +111,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-16 sm:top-18 md:top-20 lg:top-22 left-0 right-0 mobile-menu-glass z-[9999] animate-menu-slide-in">
+          <div className="lg:hidden absolute top-16 sm:top-18 md:top-20 lg:top-22 xl:top-24 left-0 right-0 mobile-menu-glass z-[9999] animate-menu-slide-in">
             {/* Additional solid background layer */}
             <div className="absolute inset-0 bg-white/95"></div>
             <div className="relative px-4 py-6 space-y-4">

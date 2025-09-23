@@ -14,18 +14,18 @@ export default function ProjectsGallery() {
     {
       title: "Vías de Acceso Mineras",
       category: "Obras Civiles",
-      image: "/i1.jpg",
+      image: "/carretera-asfaltado.jpg",
       description: "Construcción de vías de acceso vehiculares para operaciones mineras.",
     },
     {
       title: "Estructuras Industriales",
-      category: "Metalmecánica",
+      category: "Estructuras Metálicas",
       image: "/INDUSTRIAL.png",
       description: "Fabricación e instalación de estructuras metálicas para naves industriales.",
     },
     {
       title: "Soldadura Especializada",
-      category: "Metalmecánica",
+      category: "Estructuras Metálicas",
       image: "/Montaje.jpg",
       description: "Servicios de soldadura certificada con estándares internacionales.",
     },
@@ -43,9 +43,27 @@ export default function ProjectsGallery() {
     },
     {
       title: "Naves Industriales",
-      category: "Metalmecánica",
+      category: "Estructuras Metálicas",
       image: "/nave.png",
       description: "Construcción y montaje de naves industriales con estructuras metálicas.",
+    },
+    {
+      title: "Reservorios de Agua",
+      category: "Obras Civiles",
+      image: "/reservorio.jpg",
+      description: "Construcción de reservorios y sistemas de almacenamiento de agua.",
+    },
+    {
+      title: "Trabajos de Albañilería",
+      category: "Servicios Misceláneos",
+      image: "/arbañileria.png",
+      description: "Servicios especializados de albañilería y construcción civil.",
+    },
+    {
+      title: "Sistemas Drywall",
+      category: "Servicios Misceláneos",
+      image: "/drywall.jpg",
+      description: "Instalación de sistemas de drywall y tabiquería moderna.",
     },
   ]
 
@@ -132,6 +150,10 @@ export default function ProjectsGallery() {
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             className="group-hover:scale-110 transition-transform duration-500"
+                            onError={(e) => {
+                              console.log('Error loading project image:', project.image);
+                              e.currentTarget.src = '/placeholder.svg';
+                            }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">

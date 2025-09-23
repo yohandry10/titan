@@ -14,7 +14,7 @@ export default function ProjectsGallery() {
     {
       title: "Vías de Acceso Mineras",
       category: "Obras Civiles",
-      image: "/i11.jpg",
+      image: "/i1.jpg",
       description: "Construcción de vías de acceso vehiculares para operaciones mineras.",
     },
     {
@@ -24,22 +24,22 @@ export default function ProjectsGallery() {
       description: "Fabricación e instalación de estructuras metálicas para naves industriales.",
     },
     {
-      title: "Terraplenes y Plataformas",
-      category: "Obras Civiles",
-      image: "/conasarc.jpg",
-      description: "Construcción de terraplenes y plataformas para proyectos industriales.",
+      title: "Soldadura Especializada",
+      category: "Metalmecánica",
+      image: "/Montaje.jpg",
+      description: "Servicios de soldadura certificada con estándares internacionales.",
     },
     {
-      title: "Complejos Deportivos",
+      title: "Sistemas de Drenaje",
       category: "Obras Civiles",
-      image: "/complejo.jpg",
-      description: "Desarrollo de complejos deportivos y recreativos para comunidades.",
+      image: "/agua.jpg",
+      description: "Construcción de sistemas de evacuación de aguas pluviales.",
     },
     {
-      title: "Reservorios de Agua",
-      category: "Obras Civiles",
-      image: "/reservorio.jpg",
-      description: "Construcción de reservorios y sistemas de almacenamiento de agua.",
+      title: "Servicios Eléctricos",
+      category: "Servicios Misceláneos",
+      image: "/electrica.png",
+      description: "Instalaciones eléctricas industriales y sistemas de potencia.",
     },
     {
       title: "Naves Industriales",
@@ -82,14 +82,14 @@ export default function ProjectsGallery() {
   }
 
   return (
-    <section ref={sectionRef} id="proyectos" className="py-20 bg-background">
+    <section ref={sectionRef} id="proyectos" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 scroll-reveal">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-12 sm:mb-16 scroll-reveal">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Nuestros <span className="text-primary">Proyectos</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Descubre algunos de nuestros proyectos más destacados que demuestran nuestra experiencia y compromiso con la
             excelencia.
           </p>
@@ -98,16 +98,16 @@ export default function ProjectsGallery() {
         {/* Gallery */}
         <div className="relative">
           {/* Navigation Buttons */}
-          <div className="flex justify-between items-center mb-8 scroll-reveal">
+          <div className="flex justify-between items-center mb-6 sm:mb-8 scroll-reveal">
             <div className="flex space-x-2">
-              <Button variant="outline" size="sm" onClick={prevSlide} className="hover-lift bg-transparent">
-                <ChevronLeft className="w-4 h-4" />
+              <Button variant="outline" size="sm" onClick={prevSlide} className="hover-lift">
+                <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
               </Button>
-              <Button variant="outline" size="sm" onClick={nextSlide} className="hover-lift bg-transparent">
-                <ChevronRight className="w-4 h-4" />
+              <Button variant="outline" size="sm" onClick={nextSlide} className="hover-lift">
+                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
               </Button>
             </div>
-            <div className="text-sm text-muted-foreground">
+            <div className="text-xs sm:text-sm text-muted-foreground">
               {currentIndex + 1} de {Math.ceil(projects.length / 3)}
             </div>
           </div>
@@ -120,38 +120,38 @@ export default function ProjectsGallery() {
             >
               {Array.from({ length: Math.ceil(projects.length / 3) }).map((_, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0">
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {projects.slice(slideIndex * 3, slideIndex * 3 + 3).map((project, index) => (
                       <Card
                         key={project.title}
-                        className="hover-lift scroll-reveal group overflow-hidden"
+                        className="hover-lift scroll-reveal group overflow-hidden bg-white h-full flex flex-col"
                         style={{ animationDelay: `${index * 0.1}s` }}
                       >
-                        <div className="relative overflow-hidden">
+                        <div className="relative overflow-hidden aspect-[4/3] bg-gray-100 project-image-container">
                           <img
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
-                            className="w-full h-48 object-contain bg-gray-100 group-hover:scale-110 transition-transform duration-500"
+                            className="group-hover:scale-110 transition-transform duration-500"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="absolute bottom-4 left-4 right-4">
-                              <Button size="sm" variant="secondary" className="w-full">
-                                <ExternalLink className="w-4 h-4 mr-2" />
+                            <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                              <Button size="sm" variant="secondary" className="w-full text-xs sm:text-sm">
+                                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                                 Ver Proyecto
                               </Button>
                             </div>
                           </div>
-                          <div className="absolute top-4 left-4">
+                          <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                             <span className="bg-primary text-white px-2 py-1 rounded text-xs font-medium">
                               {project.category}
                             </span>
                           </div>
                         </div>
-                        <CardContent className="p-6">
-                          <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        <CardContent className="p-4 sm:p-6 flex-1 flex flex-col">
+                          <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                             {project.title}
                           </h3>
-                          <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
+                          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-1 line-clamp-3">{project.description}</p>
                         </CardContent>
                       </Card>
                     ))}
@@ -162,12 +162,12 @@ export default function ProjectsGallery() {
           </div>
 
           {/* Indicators */}
-          <div className="flex justify-center space-x-2 mt-8 scroll-reveal">
+          <div className="flex justify-center space-x-2 mt-6 sm:mt-8 scroll-reveal">
             {Array.from({ length: Math.ceil(projects.length / 3) }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
                   index === currentIndex ? "bg-primary" : "bg-muted-foreground/30"
                 }`}
               />
@@ -176,14 +176,16 @@ export default function ProjectsGallery() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16 scroll-reveal">
+        <div className="text-center mt-12 sm:mt-16 scroll-reveal">
           <Link href="/proyectos">
             <Button size="lg" className="hover-glow">
               Ver Todos los Proyectos
-              <ExternalLink className="ml-2 w-5 h-5" />
+              <ExternalLink className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
           </Link>
         </div>
+
+        {/* Bloque retirado por solicitud del cliente */}
       </div>
     </section>
   )

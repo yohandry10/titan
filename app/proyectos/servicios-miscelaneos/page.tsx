@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Calendar, Users, Settings } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 export default function ServiciosMiscelaneos() {
@@ -34,59 +34,113 @@ export default function ServiciosMiscelaneos() {
 
   const projects = [
     {
-      title: "Construcción de Veredas de Concreto",
-      description: "Construcción de veredas y lozas de concreto con acabados de alta calidad",
-      image: "/3.jpg",
-      location: "Arequipa, Perú",
-      duration: "3 meses",
-      team: "12 especialistas",
+      title: "Trabajos misceláneos de obras civiles y obras eléctricas",
+      description: "Servicios integrales de obras civiles y eléctricas para proyectos diversos",
+      image: "/electrica.png",
       details: [
-        "Preparación y nivelación del terreno",
-        "Construcción de lozas de concreto",
-        "Acabados especializados",
-        "Control de calidad en cada etapa",
+        "Obras civiles complementarias",
+        "Instalaciones eléctricas industriales",
+        "Trabajos de conexión y cableado",
+        "Mantenimiento de sistemas eléctricos",
       ],
     },
     {
-      title: "Complejos Deportivos",
-      description: "Construcción de complejos deportivos y recreativos completos",
-      image: "/complejo.jpg",
-      location: "Lima, Perú",
-      duration: "12 meses",
-      team: "40 especialistas",
+      title: "Trabajos de albañilería, carpintería y gasfitería",
+      description: "Servicios especializados en acabados y instalaciones domiciliarias",
+      image: "/arbañileria.png",
       details: [
-        "Construcción de canchas deportivas",
-        "Instalación de césped sintético",
-        "Sistemas de iluminación",
-        "Graderías y áreas recreativas",
+        "Albañilería y acabados",
+        "Trabajos de carpintería especializada",
+        "Instalaciones de gasfitería",
+        "Reparaciones y mantenimiento",
       ],
     },
     {
-      title: "Mantenimiento Industrial",
-      description: "Mantenimiento preventivo y correctivo de infraestructuras",
-      image: "/industrial12.jpg",
-      location: "Cusco, Perú",
-      duration: "Permanente",
-      team: "15 especialistas",
-      details: [
-        "Mantenimiento de viviendas y campamentos",
-        "Renovación de infraestructuras",
-        "Trabajos de albañilería y carpintería",
-        "Instalación de pisos y techos",
-      ],
-    },
-    {
-      title: "Trabajos Especializados",
-      description: "Servicios especializados en geomembrana y sistemas drywall",
+      title: "Trabajos de instalación de pisos y montaje de techos",
+      description: "Instalación profesional de pisos y sistemas de techado",
       image: "/drywall.jpg",
-      location: "Tacna, Perú",
-      duration: "6 meses",
-      team: "18 especialistas",
       details: [
-        "Trabajos en geomembrana",
-        "Sistemas de drywall y tabiquería",
-        "Instalación de coberturas de lona",
-        "Armado e instalación de anaqueles",
+        "Instalación de pisos industriales",
+        "Montaje de techos metálicos",
+        "Acabados en pisos y techos",
+        "Aislamiento térmico y acústico",
+      ],
+    },
+    {
+      title: "Mantenimiento de viviendas, campamentos, oficinas y almacenes",
+      description: "Mantenimiento integral de instalaciones residenciales e industriales",
+      image: "/mantenimiento.png",
+      details: [
+        "Mantenimiento de viviendas",
+        "Mantenimiento de campamentos mineros",
+        "Mantenimiento de oficinas",
+        "Mantenimiento de almacenes",
+      ],
+    },
+    {
+      title: "Mantenimiento preventivo, correctivo y renovación de infraestructuras",
+      description: "Servicios completos de mantenimiento y renovación de infraestructuras",
+      image: "/estructura.png",
+      details: [
+        "Mantenimiento preventivo programado",
+        "Mantenimiento correctivo de emergencia",
+        "Renovación de infraestructuras interiores",
+        "Renovación de infraestructuras exteriores",
+      ],
+    },
+    {
+      title: "Obras eléctricas para proyectos de sostenimiento",
+      description: "Instalaciones eléctricas especializadas para proyectos de minería",
+      image: "/elec.png",
+      details: [
+        "Instalaciones eléctricas subterráneas",
+        "Sistemas de iluminación industrial",
+        "Instalaciones de fuerza y control",
+        "Sistemas de seguridad eléctrica",
+      ],
+    },
+    {
+      title: "Instalación de coberturas de lona",
+      description: "Instalación de sistemas de cobertura temporal y permanente",
+      image: "/lona.png",
+      details: [
+        "Coberturas temporales de protección",
+        "Lonas industriales resistentes",
+        "Sistemas de anclaje seguros",
+        "Mantenimiento de coberturas",
+      ],
+    },
+    {
+      title: "Sistemas de drywall y tabiquería",
+      description: "Construcción de divisiones interiores con sistemas modernos",
+      image: "/dry.jpg",
+      details: [
+        "Tabiques de drywall",
+        "Cielos rasos suspendidos",
+        "Aislamientos acústicos",
+        "Acabados y pintura",
+      ],
+    },
+    {
+      title: "Armado e instalación de anaqueles",
+      description: "Instalación de sistemas de almacenamiento industrial",
+      image: "/anaqueles.png",
+      details: [
+        "Anaqueles industriales pesados",
+        "Sistemas de almacenamiento vertical",
+        "Instalación y configuración",
+        "Mantenimiento de anaqueles",
+      ],
+    },
+    {
+      title: "Trabajos en geomembrana",
+      description: "Instalación y mantenimiento de sistemas de impermeabilización",
+      image: "/geomembrana.png",
+      details: [
+        "Instalación de geomembranas",
+        "Soldadura de juntas especializadas",
+        "Control de calidad en instalación",
+        "Reparación y mantenimiento",
       ],
     },
   ]
@@ -115,36 +169,6 @@ export default function ServiciosMiscelaneos() {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Servicios Complementarios</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ofrecemos una amplia gama de servicios complementarios para completar cualquier proyecto de construcción.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Trabajos de albañilería, carpintería y gasfitería",
-              "Instalación de pisos y montaje de techos",
-              "Mantenimiento de viviendas y campamentos",
-              "Sistemas de drywall y tabiquería",
-              "Trabajos en geomembrana",
-              "Instalación de coberturas de lona",
-            ].map((service, index) => (
-              <Card key={service} className="hover-lift">
-                <CardContent className="p-4">
-                  <div className="flex items-center">
-                    <Settings className="w-4 h-4 text-primary mr-3" />
-                    <span className="text-sm font-medium">{service}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Projects Gallery */}
       <section ref={sectionRef} className="py-20">
@@ -158,37 +182,21 @@ export default function ServiciosMiscelaneos() {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card key={project.title} className="hover-lift scroll-reveal overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
+              <Card key={project.title} className="hover-lift scroll-reveal overflow-hidden h-full flex flex-col">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 project-image-container">
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-full object-contain bg-gray-100 hover:scale-110 transition-transform duration-500"
+                    className="hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2 line-clamp-2">{project.title}</h3>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="text-center">
-                      <MapPin className="w-5 h-5 text-primary mx-auto mb-1" />
-                      <div className="text-xs text-muted-foreground">{project.location}</div>
-                    </div>
-                    <div className="text-center">
-                      <Calendar className="w-5 h-5 text-primary mx-auto mb-1" />
-                      <div className="text-xs text-muted-foreground">{project.duration}</div>
-                    </div>
-                    <div className="text-center">
-                      <Users className="w-5 h-5 text-primary mx-auto mb-1" />
-                      <div className="text-xs text-muted-foreground">{project.team}</div>
-                    </div>
-                  </div>
-
-                  <div>
+                <CardContent className="p-6 flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-foreground mb-3">Características del proyecto:</h4>
                     <ul className="space-y-2">
                       {project.details.map((detail, idx) => (

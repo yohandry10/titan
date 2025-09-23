@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Calendar, Users, Wrench } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 export default function EstructurasMetalicasPage() {
@@ -34,59 +34,102 @@ export default function EstructurasMetalicasPage() {
 
   const projects = [
     {
-      title: "Naves Industriales",
-      description: "Construcción y montaje de naves industriales de gran envergadura",
-      image: "/nave.png",
-      location: "Arequipa, Perú",
-      duration: "10 meses",
-      team: "30 especialistas",
+      title: "Ingeniería de detalle y planos de fabricación",
+      description: "Desarrollo de ingeniería especializada y documentación técnica para fabricación",
+      image: "/plano.png",
       details: [
-        "Ingeniería de detalle y planos de fabricación",
-        "Fabricación de estructuras de acero",
-        "Montaje y alineamiento especializado",
-        "Instalación de sistemas de techado",
+        "Planos de fabricación detallados",
+        "Cálculos estructurales especializados",
+        "Especificaciones técnicas precisas",
+        "Documentación para control de calidad",
       ],
     },
     {
-      title: "Estructuras de Acero",
-      description: "Fabricación e instalación de estructuras metálicas complejas",
-      image: "/metal.png",
-      location: "Lima, Perú",
-      duration: "8 meses",
-      team: "25 especialistas",
+      title: "Cálculo y diseño de estructuras",
+      description: "Análisis estructural y diseño de elementos metálicos complejos",
+      image: "/INDUSTRIAL.png",
       details: [
-        "Cálculo y diseño de estructuras",
-        "Fabricación de vigas y columnas",
-        "Instalación de escaleras industriales",
-        "Montaje de pórticos y techos",
+        "Análisis de cargas y resistencia",
+        "Diseño sismorresistente",
+        "Optimización de materiales",
+        "Cumplimiento de normas técnicas",
       ],
     },
     {
-      title: "Chutes y Coberturas",
-      description: "Fabricación de chutes, guardas y coberturas industriales",
-      image: "/2.jpg",
-      location: "Cusco, Perú",
-      duration: "6 meses",
-      team: "20 especialistas",
-      details: [
-        "Diseño de chutes especializados",
-        "Fabricación de guardas de seguridad",
-        "Instalación de coberturas",
-        "Sistemas de protección industrial",
-      ],
-    },
-    {
-      title: "Montaje Especializado",
-      description: "Montaje y alineamiento de estructuras metálicas de precisión",
+      title: "Montaje y alineamiento de estructuras",
+      description: "Montaje preciso y alineamiento de estructuras metálicas industriales",
       image: "/Montaje.jpg",
-      location: "Tacna, Perú",
-      duration: "4 meses",
-      team: "15 especialistas",
       details: [
-        "Montaje de estructuras complejas",
-        "Alineamiento de precisión",
-        "Soldadura especializada",
+        "Montaje con equipos especializados",
+        "Alineamiento de alta precisión",
+        "Control topográfico continuo",
+        "Procedimientos de seguridad",
+      ],
+    },
+    {
+      title: "Fabricación y montaje de estructuras",
+      description: "Proceso integral desde fabricación hasta montaje final",
+      image: "/fabricacion.png",
+      details: [
+        "Fabricación en taller especializado",
+        "Control de calidad en fabricación",
+        "Transporte y logística",
+        "Montaje en sitio",
+      ],
+    },
+    {
+      title: "Fabricación e instalación de escaleras industriales",
+      description: "Escaleras, vigas, techos y pórticos para instalaciones industriales",
+      image: "/escalera.png",
+      details: [
+        "Escaleras industriales certificadas",
+        "Vigas de acero estructural",
+        "Sistemas de techado metálico",
+        "Pórticos para naves industriales",
+      ],
+    },
+    {
+      title: "Fabricación de chutes, guardas y coberturas",
+      description: "Elementos de protección y manejo de materiales industriales",
+      image: "/2.jpg",
+      details: [
+        "Chutes para manejo de materiales",
+        "Guardas de seguridad industrial",
+        "Coberturas protectoras",
+        "Sistemas de contención",
+      ],
+    },
+    {
+      title: "Construcción y montaje de naves industriales",
+      description: "Construcción completa de naves industriales de gran envergadura",
+      image: "/estructura.png",
+      details: [
+        "Naves industriales completas",
+        "Sistemas de ventilación",
+        "Estructuras de soporte",
+        "Acabados industriales",
+      ],
+    },
+    {
+      title: "Soldadura especializada y certificada",
+      description: "Servicios de soldadura con certificaciones internacionales",
+      image: "/metal.png",
+      details: [
+        "Soldadores certificados AWS",
+        "Procedimientos de soldadura calificados",
+        "Ensayos no destructivos",
         "Control de calidad riguroso",
+      ],
+    },
+    {
+      title: "Reforzamiento de estructuras existentes",
+      description: "Reforzamiento y rehabilitación de estructuras metálicas",
+      image: "/estructura11.png",
+      details: [
+        "Evaluación estructural previa",
+        "Diseño de reforzamientos",
+        "Instalación sin interrumpir operaciones",
+        "Certificación de reforzamientos",
       ],
     },
   ]
@@ -116,36 +159,6 @@ export default function EstructurasMetalicasPage() {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Servicios de Metalmecánica</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ofrecemos servicios integrales en estructuras metálicas, desde el diseño hasta la instalación final.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Ingeniería de detalle y planos de fabricación",
-              "Cálculo y diseño de estructuras",
-              "Montaje y alineamiento de estructuras",
-              "Fabricación e instalación de escaleras industriales",
-              "Fabricación de chutes, guardas y coberturas",
-              "Construcción y montaje de naves industriales",
-            ].map((service, index) => (
-              <Card key={service} className="hover-lift">
-                <CardContent className="p-4">
-                  <div className="flex items-center">
-                    <Wrench className="w-4 h-4 text-primary mr-3" />
-                    <span className="text-sm font-medium">{service}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Projects Gallery */}
       <section ref={sectionRef} className="py-20">
@@ -159,37 +172,21 @@ export default function EstructurasMetalicasPage() {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card key={project.title} className="hover-lift scroll-reveal overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
+              <Card key={project.title} className="hover-lift scroll-reveal overflow-hidden h-full flex flex-col">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 project-image-container">
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-full object-contain bg-gray-100 hover:scale-110 transition-transform duration-500"
+                    className="hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2 line-clamp-2">{project.title}</h3>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="text-center">
-                      <MapPin className="w-5 h-5 text-primary mx-auto mb-1" />
-                      <div className="text-xs text-muted-foreground">{project.location}</div>
-                    </div>
-                    <div className="text-center">
-                      <Calendar className="w-5 h-5 text-primary mx-auto mb-1" />
-                      <div className="text-xs text-muted-foreground">{project.duration}</div>
-                    </div>
-                    <div className="text-center">
-                      <Users className="w-5 h-5 text-primary mx-auto mb-1" />
-                      <div className="text-xs text-muted-foreground">{project.team}</div>
-                    </div>
-                  </div>
-
-                  <div>
+                <CardContent className="p-6 flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-foreground mb-3">Características del proyecto:</h4>
                     <ul className="space-y-2">
                       {project.details.map((detail, idx) => (

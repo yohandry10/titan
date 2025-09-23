@@ -117,7 +117,7 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 animate-fade-in-up"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
             Construimos el

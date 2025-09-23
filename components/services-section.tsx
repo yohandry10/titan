@@ -86,7 +86,17 @@ export default function ServicesSection() {
   ]
 
   return (
-    <section ref={sectionRef} id="servicios" className="py-20" style={{ backgroundColor: '#2a313b' }}>
+    <section 
+      ref={sectionRef} 
+      id="servicios" 
+      className="py-20 bg-fixed bg-cover bg-center relative"
+      style={{ backgroundImage: 'url(/fondo.jpg)' }}
+    >
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      
+      {/* Contenido con z-index para estar sobre el overlay */}
+      <div className="relative z-10">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
@@ -175,6 +185,7 @@ export default function ServicesSection() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

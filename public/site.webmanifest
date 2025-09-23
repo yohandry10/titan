@@ -1,0 +1,21 @@
+{
+  "name": "TITAN Soluciones",
+  "short_name": "TITAN",
+  "description": "Ingeniería, Construcción e Industria en Arequipa, Perú",
+  "icons": [
+    {
+      "src": "/favi.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favi.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1e40af",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -24,7 +24,7 @@ export default function ProjectsGallery() {
       description: "Fabricación e instalación de estructuras metálicas para naves industriales.",
     },
     {
-      title: "Soldadura Especializada",
+      title: "Montaje y alineamiento de estructuras",
       category: "Estructuras Metálicas",
       image: "/Montaje.jpg",
       description: "Servicios de soldadura certificada con estándares internacionales.",

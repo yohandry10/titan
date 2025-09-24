@@ -89,7 +89,7 @@ export default function AboutSection() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 sm:mb-6">
-            ¿Por qué elegir <span className="text-primary">TITAN</span>?
+            ¿Por qué elegir <span className="text-primary">TITAN SOLUCIONES</span>?
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             La sinergia de nuestro talento humano es la fórmula de éxito que nos encamina a posicionarnos como la mejor
@@ -98,7 +98,7 @@ export default function AboutSection() {
         </div>
 
         {/* Interactive Tab Section - Misión, Visión, Políticas */}
-        <div className="mb-16 sm:mb-20 scroll-reveal">
+        <div className="mb-20 sm:mb-24 scroll-reveal">
           <Card className="bg-white shadow-xl border-0 overflow-hidden">
             <CardContent className="p-0">
               {/* Tab Navigation */}
@@ -134,7 +134,7 @@ export default function AboutSection() {
                       })()}
                     </div>
                     <div className="text-center sm:text-left">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-3">{tabs[activeTab].title}</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8">{tabs[activeTab].title}</h3>
                       {tabs[activeTab].id === 'politicas' ? (
                         <div className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                           {tabs[activeTab].content.split('\n').map((policy, index) => (
@@ -150,6 +150,11 @@ export default function AboutSection() {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Separator */}
+        <div className="mb-16 sm:mb-20">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto rounded-full"></div>
         </div>
 
         {/* Values */}
@@ -172,7 +177,7 @@ export default function AboutSection() {
         </div>
 
         {/* Company Description */}
-        <div className="mt-12 sm:mt-16 text-center scroll-reveal">
+        <div className="mt-16 sm:mt-20 text-center scroll-reveal">
           <div className="max-w-4xl mx-auto px-4">
             <p className="text-base sm:text-lg text-foreground leading-relaxed font-medium">
               Contamos con un equipo multidisciplinario de profesionales y especialistas técnicos calificados, lo cual

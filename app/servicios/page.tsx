@@ -1,10 +1,8 @@
 "use client"
 
-import { useState, useEffect } from 'react'
-import { ChevronRight, Play, Pause, ArrowRight, CheckCircle, Star, Award, Shield, Clock } from 'lucide-react'
+import { ChevronRight, ArrowRight, Star, Award, Shield, Clock } from 'lucide-react'
 
 export default function ServiciosPage() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   const projects = [
     {
@@ -26,6 +24,7 @@ export default function ServiciosPage() {
       empresa: 'MUNICIPALIDAD DISTRITAL DE HUAMBO',
       servicio: 'SERVICIO DE REFORMULACION DE EXPEDIENTE TECNICO MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN EL CAMINO VECINAL KM 4+404 DE LA CARRETERA YANACOTO SAJARHUA - DISTRITO DE HUAMBO, PROVINCIA DE CAYLLOMA, AREQUIPA.',
       ubicacion: 'DISTRITO DE HUAMBO, PROVINCIA DE CAYLLOMA, AREQUIPA',
+      periodo: 'Noviembre 2018',
       imagen: '/civil-construction-projects.jpg'
     },
     {
@@ -105,7 +104,7 @@ export default function ServiciosPage() {
 
 
   const handleWhatsAppClick = (service?: string) => {
-    const message = service 
+    const message = service
       ? `Hola! Me interesa conocer más sobre ${service} de TITAN Soluciones. ¿Podrían brindarme información detallada?`
       : "Hola! Me interesa conocer más sobre los servicios de TITAN Soluciones. ¿Podrían brindarme información detallada?"
     const phoneNumber = "51992027156"
@@ -118,16 +117,16 @@ export default function ServiciosPage() {
       {/* Hero Section with Video Background */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
-        <video 
+        <video
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay 
-          muted 
+          autoPlay
+          muted
           loop
           playsInline
         >
           <source src="/copia6.mp4" type="video/mp4" />
         </video>
-        
+
         <div className="relative z-20 text-center text-white max-w-6xl mx-auto px-8">
           <div className="mb-8">
             <a href="/" className="inline-flex items-center text-white/80 hover:text-white transition-colors group">
@@ -135,28 +134,28 @@ export default function ServiciosPage() {
               Volver al inicio
             </a>
           </div>
-          
+
           <h1 className="text-7xl md:text-8xl font-bold mb-8 leading-tight">
-            Nuestros Proyectos
+            Nuestros
             <span className="block bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-              Especializados
+              Proyectos
             </span>
           </h1>
-          
+
           <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transformamos ideas en realidad con ingeniería de precisión, 
+            Transformamos ideas en realidad con ingeniería de precisión,
             construcción de vanguardia y mantenimiento especializado
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button 
+            <button
               onClick={() => handleWhatsAppClick()}
               className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 text-xl rounded-full font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center"
             >
               <span className="mr-3">💬</span>
               Consulta Gratuita
             </button>
-            <button 
+            <button
               onClick={() => document.getElementById('servicios-detalle')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-10 py-5 text-xl rounded-full font-semibold hover:bg-white/20 transition-all duration-300 flex items-center"
             >
@@ -165,7 +164,7 @@ export default function ServiciosPage() {
             </button>
           </div>
         </div>
-        
+
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
           <div className="animate-bounce">
@@ -185,46 +184,6 @@ export default function ServiciosPage() {
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
               Cada proyecto refleja nuestro compromiso con la excelencia, calidad y cumplimiento de plazos
             </p>
-            
-            {/* Featured Images */}
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src="/carretera-asfaltado.jpg"
-                  alt="Infraestructura Vial"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Infraestructura Vial</h3>
-                  <p className="text-sm opacity-90">Construcción y mejoramiento</p>
-                </div>
-              </div>
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src="/estructura11.png"
-                  alt="Estructuras Metálicas"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Estructuras Metálicas</h3>
-                  <p className="text-sm opacity-90">Fabricación y montaje</p>
-                </div>
-              </div>
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src="/mantenimiento.png"
-                  alt="Servicios Especializados"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Servicios Especializados</h3>
-                  <p className="text-sm opacity-90">Mantenimiento y reparación</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Projects Grid */}
@@ -233,7 +192,7 @@ export default function ServiciosPage() {
               <div key={project.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 {/* Project Image */}
                 <div className="relative h-80 overflow-hidden">
-                  <img 
+                  <img
                     src={project.imagen}
                     alt={`Proyecto ${project.empresa}`}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
@@ -255,7 +214,7 @@ export default function ServiciosPage() {
                     <span className="text-lg font-bold text-orange-600 uppercase tracking-wide">EMPRESA/ENTIDAD:</span>
                     <h3 className="text-xl font-bold text-gray-900 mt-2 leading-tight">{project.empresa}</h3>
                   </div>
-                  
+
                   <div className="mb-4">
                     <span className="text-lg font-bold text-orange-600 uppercase tracking-wide">SERVICIO:</span>
                     <p className="text-base text-gray-800 leading-relaxed mt-2">{project.servicio}</p>
@@ -319,59 +278,59 @@ export default function ServiciosPage() {
       </div>
 
       {/* Features Section */}
-      <div 
+      <div
         className="py-20 bg-fixed bg-cover bg-center relative"
         style={{ backgroundImage: 'url(/hero.jpg)' }}
       >
         {/* Overlay oscuro */}
         <div className="absolute inset-0 bg-black/60"></div>
-        
+
         {/* Contenido con z-index para estar sobre el overlay */}
         <div className="relative z-10">
           <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6">
-              ¿Por qué <span className="text-orange-500">TITAN Soluciones</span>?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Nuestra experiencia, tecnología y compromiso nos posicionan como líderes en el sector
-            </p>
-          </div>
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-white mb-6">
+                ¿Por qué <span className="text-orange-500">TITAN Soluciones</span>?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Nuestra experiencia, tecnología y compromiso nos posicionan como líderes en el sector
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
-                <div key={index} className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <Icon className="w-10 h-10 text-white" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon
+                return (
+                  <div key={index} className="text-center group">
+                    <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <Icon className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
+                )
+              })}
+            </div>
 
-          {/* Additional Benefits */}
-          <div className="mt-16 grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Tecnología Avanzada', description: 'Equipos de última generación y software especializado', icon: '🚀' },
-              { title: 'Equipo Multidisciplinario', description: 'Ingenieros, arquitectos y técnicos especializados', icon: '👥' },
-              { title: 'Sostenibilidad', description: 'Prácticas ambientalmente responsables en todos nuestros proyectos', icon: '🌱' }
-            ].map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
-            ))}
+            {/* Additional Benefits */}
+            <div className="mt-16 grid md:grid-cols-3 gap-8">
+              {[
+                { title: 'Tecnología Avanzada', description: 'Equipos de última generación y software especializado', icon: '🚀' },
+                { title: 'Equipo Multidisciplinario', description: 'Ingenieros, arquitectos y técnicos especializados', icon: '👥' },
+                { title: 'Sostenibilidad', description: 'Prácticas ambientalmente responsables en todos nuestros proyectos', icon: '🌱' }
+              ].map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -429,22 +388,22 @@ export default function ServiciosPage() {
             ¿Listo para tu próximo
             <span className="block text-yellow-300">Proyecto?</span>
           </h2>
-          
+
           <p className="text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
             Transformemos tus ideas en realidad con la experiencia y calidad que solo TITAN Soluciones puede ofrecer
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-            <button 
+            <button
               onClick={() => handleWhatsAppClick()}
               className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-6 text-xl rounded-full font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center"
             >
               <span className="mr-3">💬</span>
               Consulta Gratuita por WhatsApp
             </button>
-            
-            <a 
-              href="/proyectos" 
+
+            <a
+              href="/proyectos"
               className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-12 py-6 text-xl rounded-full font-bold hover:bg-white/20 transition-all duration-300 flex items-center"
             >
               Ver Todos los Servicios

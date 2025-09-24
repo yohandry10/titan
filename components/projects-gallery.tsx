@@ -105,7 +105,7 @@ export default function ProjectsGallery() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 sm:mb-6">
-            Nuestros <span className="text-primary">Servicios</span>
+            Nuestros <span className="text-primary">Proyectos</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Descubre algunos de nuestros proyectos más destacados que demuestran nuestra experiencia y compromiso con la
@@ -198,9 +198,9 @@ export default function ProjectsGallery() {
 
         {/* CTA */}
         <div className="text-center mt-12 sm:mt-16 scroll-reveal">
-          <Link href="/proyectos">
+          <Link href="/servicios">
             <Button size="lg" className="hover-glow">
-              Ver Todos los Servicios
+              Ver Todos los Proyectos
               <ExternalLink className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
           </Link>

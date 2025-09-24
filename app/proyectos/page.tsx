@@ -52,7 +52,7 @@ export default function ProyectosPage() {
       ],
     },
     {
-      title: "Estructuras Metálicas",
+      title: "Estructuras Metálicas y servicio de metalmecanica",
       description: "Diseño, fabricación y montaje de estructuras metálicas industriales",
       href: "/proyectos/estructuras-metalicas",
       image: "/metalica.png",
@@ -114,9 +114,9 @@ export default function ProyectosPage() {
       {/* Projects Categories */}
       <section ref={sectionRef} className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectCategories.map((category, index) => (
-              <Card key={category.title} className="hover-lift scroll-reveal group overflow-hidden flex flex-col h-full">
+              <Card key={`${category.title}-${index}`} className="hover-lift scroll-reveal group overflow-hidden flex flex-col h-full">
                 <div className="relative h-64 overflow-hidden bg-gray-100 project-image-container">
                   <img
                     src={category.image || "/placeholder.svg"}

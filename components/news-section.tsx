@@ -24,7 +24,7 @@ import Link from "next/link"
 export default function NewsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -89,38 +89,7 @@ export default function NewsSection() {
     }
   ]
 
-  const recentNews = [
-    {
-      id: 4,
-      title: "Tecnología Avanzada en Construcción",
-      excerpt: "Utilizamos las últimas tecnologías y metodologías para garantizar la eficiencia y calidad en todos nuestros proyectos.",
-      category: "Tecnología",
-      date: "2024-02-28",
-      readTime: "5 min",
-      views: 420,
-      icon: Zap
-    },
-    {
-      id: 5,
-      title: "Compromiso con la Seguridad Laboral",
-      excerpt: "La seguridad de nuestros trabajadores es nuestra prioridad número uno en cada proyecto que desarrollamos.",
-      category: "Seguridad",
-      date: "2024-02-20",
-      readTime: "3 min",
-      views: 380,
-      icon: Award
-    },
-    {
-      id: 6,
-      title: "Responsabilidad Ambiental",
-      excerpt: "Desarrollamos nuestros proyectos con conciencia ambiental, implementando prácticas sostenibles y responsables.",
-      category: "Medio Ambiente",
-      date: "2024-02-15",
-      readTime: "4 min",
-      views: 520,
-      icon: TrendingUp
-    }
-  ]
+
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % featuredNews.length)
@@ -278,71 +247,7 @@ export default function NewsSection() {
           </div>
         </div>
 
-        {/* Noticias Recientes - Grid */}
-        <div className="scroll-reveal">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-semibold text-foreground">Información Adicional</h3>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recentNews.map((news, index) => (
-              <Card
-                key={news.id}
-                className="group hover-lift cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300"
-                onMouseEnter={() => setHoveredCard(news.id)}
-                onMouseLeave={() => setHoveredCard(null)}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`w-12 h-12 ${getCategoryColor(news.category)} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform`}>
-                      <news.icon className="w-6 h-6" />
-                    </div>
-                    <div className="flex-1">
-                      <Badge variant="secondary" className="mb-2 text-xs">
-                        {news.category}
-                      </Badge>
-                      <h4 className="font-medium text-foreground group-hover:text-primary transition-colors leading-tight">
-                        {news.title}
-                      </h4>
-                    </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {news.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-xs text-muted-foreground">
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        {new Date(news.date).toLocaleDateString('es-ES', { 
-                          day: 'numeric', 
-                          month: 'short' 
-                        })}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        {news.readTime}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Eye className="w-3 h-3" />
-                      {news.views}
-                    </div>
-                  </div>
-                  
-                  <div className={`mt-4 flex items-center text-primary text-sm font-medium transition-all duration-300 ${
-                    hoveredCard === news.id ? 'translate-x-2' : ''
-                  }`}>
-                    Leer más
-                    <ArrowRight className="ml-1 w-3 h-3" />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
 
         {/* Newsletter Subscription */}
         <div className="mt-16 scroll-reveal">
@@ -360,7 +265,7 @@ export default function NewsSection() {
                   <input
                     type="email"
                     placeholder="Tu correo electrónico"
-                    className="flex-1 px-4 py-3 rounded-lg text-foreground border-0 focus:ring-2 focus:ring-white/50 outline-none"
+                    className="flex-1 px-4 py-3 rounded-lg text-foreground border-0 focus:ring-2 focus:ring-white/50 outline-none placeholder:text-white/70"
                   />
                   <Button variant="secondary" className="bg-white text-primary hover:bg-gray-100 px-8">
                     Suscribirse

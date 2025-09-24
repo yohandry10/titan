@@ -140,16 +140,16 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 mb-8 sm:mb-12 animate-fade-in-up px-4"
             style={{ animationDelay: "0.6s" }}
           >
-            <Link href="#servicios" className="w-full sm:w-auto">
+            <Link href="/servicios" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover-glow group w-full sm:w-auto"
               >
-                Nuestros Servicios
+                Nuestros Proyectos
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/servicios" className="w-full sm:w-auto">
+            <Link href="/proyectos" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 size="lg"

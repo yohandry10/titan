@@ -1,13 +1,71 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { useState, useEffect, useRef } from "react"
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Construction, Factory, Wrench, ArrowRight, CheckCircle } from "lucide-react"
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesSection() {
+  const [currentIndex, setCurrentIndex] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
+
+  const projects = [
+    {
+      title: "Vías de Acceso Mineras",
+      category: "Obras Civiles",
+      image: "/carretera-asfaltado.jpg",
+      description: "Construcción de vías de acceso vehiculares para operaciones mineras.",
+    },
+    {
+      title: "Estructuras Industriales",
+      category: "Estructuras Metálicas",
+      image: "/INDUSTRIAL.png",
+      description: "Fabricación e instalación de estructuras metálicas para naves industriales.",
+    },
+    {
+      title: "Montaje y alineamiento de estructuras",
+      category: "Estructuras Metálicas",
+      image: "/Montaje.jpg",
+      description: "Servicios de soldadura certificada con estándares internacionales.",
+    },
+    {
+      title: "Sistemas de Drenaje",
+      category: "Obras Civiles",
+      image: "/agua.jpg",
+      description: "Construcción de sistemas de evacuación de aguas pluviales.",
+    },
+    {
+      title: "Servicios Eléctricos",
+      category: "Servicios Misceláneos",
+      image: "/electrica.png",
+      description: "Instalaciones eléctricas industriales y sistemas de potencia.",
+    },
+    {
+      title: "Naves Industriales",
+      category: "Estructuras Metálicas",
+      image: "/nave.png",
+      description: "Construcción y montaje de naves industriales con estructuras metálicas.",
+    },
+    {
+      title: "Reservorios de Agua",
+      category: "Obras Civiles",
+      image: "/reservorio.jpg",
+      description: "Construcción de reservorios y sistemas de almacenamiento de agua.",
+    },
+    {
+      title: "Trabajos de Albañilería",
+      category: "Servicios Misceláneos",
+      image: "/arbañileria.png",
+      description: "Servicios especializados de albañilería y construcción civil.",
+    },
+    {
+      title: "Sistemas Drywall",
+      category: "Servicios Misceláneos",
+      image: "/drywall.jpg",
+      description: "Instalación de sistemas de drywall y tabiquería moderna.",
+    },
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,7 +76,7 @@ export default function ServicesSection() {
             elements.forEach((el, index) => {
               setTimeout(() => {
                 el.classList.add("revealed")
-              }, index * 150)
+              }, index * 100)
             })
           }
         })
@@ -33,158 +91,119 @@ export default function ServicesSection() {
     return () => observer.disconnect()
   }, [])
 
-  const services = [
-    {
-      icon: Construction,
-      title: "Proyectos de Obras Civiles",
-      description: "Construcción integral de infraestructura civil con los más altos estándares.",
-      items: [
-        "Excavaciones y movimiento de tierras",
-        "Construcción de vías de acceso",
-        "Sistemas de evacuación de aguas pluviales",
-        "Construcción de terraplenes y plataformas",
-        "Lozas y veredas de concreto",
-        "Alcantarillado y saneamiento",
-        "Reservorios y mini represas",
-        "Complejos deportivos y recreativos",
-      ],
-      color: "bg-blue-500",
-      href: "/proyectos/obras-civiles",
-    },
-    {
-      icon: Factory,
-      title: "Estructuras Metálicas y servicio de metalmecanica",
-      description: "Diseño, fabricación e instalación de estructuras metálicas industriales.",
-      items: [
-        "Ingeniería de detalle y planos de fabricación",
-        "Cálculo y diseño de estructuras",
-        "Montaje y alineamiento de estructuras",
-        "Fabricación de escaleras industriales",
-        "Vigas, techos y pórticos",
-        "Chutes, guardas y coberturas",
-        "Construcción de naves industriales",
-      ],
-      color: "bg-orange-500",
-      href: "/proyectos/estructuras-metalicas",
-    },
-    {
-      icon: Wrench,
-      title: "Servicios Misceláneos",
-      description: "Servicios complementarios para el mantenimiento y mejora de instalaciones.",
-      items: [
-        "Trabajos de albañilería y carpintería",
-        "Instalación de pisos y techos",
-        "Mantenimiento de infraestructuras",
-        "Obras eléctricas especializadas",
-        "Instalación de coberturas",
-        "Sistemas de drywall",
-        "Trabajos en geomembrana",
-      ],
-      color: "bg-gray-500",
-      href: "/proyectos/servicios-miscelaneos",
-    },
-  ]
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % Math.ceil(projects.length / 3))
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + Math.ceil(projects.length / 3)) % Math.ceil(projects.length / 3))
+  }
 
   return (
-    <section
-      ref={sectionRef}
-      id="servicios"
-      className="py-20 bg-fixed bg-cover bg-center relative"
-      style={{ backgroundImage: 'url(/drywall.jpg)' }}
-    >
-      {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/60"></div>
+    <section ref={sectionRef} id="servicios" className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16 scroll-reveal">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 sm:mb-6">
+            Nuestros <span className="text-primary">Servicios</span>
+          </h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+            Ofrecemos soluciones integrales en ingeniería, construcción y mantenimiento para los sectores de minería,
+            construcción e industria.
+          </p>
+        </div>
 
-      {/* Contenido con z-index para estar sobre el overlay */}
-      <div className="relative z-10">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-12 sm:mb-16 scroll-reveal">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 sm:mb-6">
-              Nuestros <span className="text-primary">Servicios</span>
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-              Ofrecemos soluciones integrales en ingeniería, construcción y mantenimiento para los sectores de minería,
-              construcción e industria.
-            </p>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-            {services.map((service, index) => (
-              <Card
-                key={service.title}
-                className="hover-lift scroll-reveal group overflow-hidden bg-white"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <CardHeader className="pb-3 sm:pb-4">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center mb-3 sm:mb-4">
-                    <div
-                      className={`w-10 h-10 sm:w-12 sm:h-12 ${service.color} rounded-lg flex items-center justify-center mb-3 sm:mb-0 sm:mr-4 group-hover:scale-110 transition-transform`}
-                    >
-                      <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                    </div>
-                    <CardTitle className="text-lg sm:text-xl text-foreground group-hover:text-primary transition-colors">
-                      {service.title}
-                    </CardTitle>
-                  </div>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{service.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4 sm:mb-6">
-                    {service.items.slice(0, 4).map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start text-xs sm:text-sm text-muted-foreground">
-                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                    {service.items.length > 4 && (
-                      <li className="text-xs sm:text-sm text-muted-foreground">
-                        <span className="text-primary font-medium">+{service.items.length - 4} servicios más</span>
-                      </li>
-                    )}
-                  </ul>
-                  <Link href="/proyectos">
-                    <Button
-                      variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-white transition-colors bg-transparent text-sm sm:text-base"
-                    >
-                      Ver Detalles
-                      <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center scroll-reveal">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 sm:p-8 md:p-12 text-white">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4">¿Necesitas una cotización personalizada?</h3>
-              <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto px-4">
-                Nuestro equipo de expertos está listo para evaluar tu proyecto y brindarte la mejor solución adaptada a
-                tus necesidades.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-                <Link href="/servicios" className="w-full sm:w-auto">
-                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 w-full sm:w-auto">
-                    Ver Todos los Proyectos
-                    <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-                  </Button>
-                </Link>
-                <Link href="/proyectos" className="w-full sm:w-auto">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-primary bg-transparent w-full sm:w-auto"
-                  >
-                    Ver Servicios
-                  </Button>
-                </Link>
-              </div>
+        {/* Gallery */}
+        <div className="relative">
+          {/* Navigation Buttons */}
+          <div className="flex justify-between items-center mb-6 sm:mb-8 scroll-reveal">
+            <div className="flex space-x-2">
+              <Button variant="outline" size="sm" onClick={prevSlide} className="hover-lift">
+                <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
+              </Button>
+              <Button variant="outline" size="sm" onClick={nextSlide} className="hover-lift">
+                <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
+              </Button>
+            </div>
+            <div className="text-xs sm:text-sm text-muted-foreground">
+              {currentIndex + 1} de {Math.ceil(projects.length / 3)}
             </div>
           </div>
+
+          {/* Projects Grid */}
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {Array.from({ length: Math.ceil(projects.length / 3) }).map((_, slideIndex) => (
+                <div key={slideIndex} className="w-full flex-shrink-0">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    {projects.slice(slideIndex * 3, slideIndex * 3 + 3).map((project, index) => (
+                      <Card
+                        key={project.title}
+                        className="hover-lift scroll-reveal group overflow-hidden bg-white h-full flex flex-col"
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                      >
+                        <div className="relative overflow-hidden aspect-[4/3] bg-gray-100 project-image-container">
+                          <img
+                            src={project.image || "/placeholder.svg"}
+                            alt={project.title}
+                            className="group-hover:scale-110 transition-transform duration-500"
+                            onError={(e) => {
+                              console.log('Error loading project image:', project.image);
+                              e.currentTarget.src = '/placeholder.svg';
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                              <Button size="sm" variant="secondary" className="w-full text-xs sm:text-sm">
+                                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                                Ver Proyecto
+                              </Button>
+                            </div>
+                          </div>
+                          <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+                            <span className="bg-primary text-white px-2 py-1 rounded text-xs font-medium">
+                              {project.category}
+                            </span>
+                          </div>
+                        </div>
+                        <CardContent className="p-4 sm:p-6 flex-1 flex flex-col">
+                          <h3 className="text-lg sm:text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                            {project.title}
+                          </h3>
+                          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-1 line-clamp-3">{project.description}</p>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Indicators */}
+          <div className="flex justify-center space-x-2 mt-6 sm:mt-8 scroll-reveal">
+            {Array.from({ length: Math.ceil(projects.length / 3) }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${index === currentIndex ? "bg-primary" : "bg-muted-foreground/30"
+                  }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-12 sm:mt-16 scroll-reveal">
+          <Link href="/proyectos">
+            <Button size="lg" className="hover-glow">
+              Ver Todos los Servicios
+              <ExternalLink className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

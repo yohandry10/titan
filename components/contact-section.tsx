@@ -89,23 +89,7 @@ export default function ContactSection() {
     }
   ]
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: "Respuesta en 24h",
-      description: "Te contactamos en menos de 24 horas"
-    },
-    {
-      icon: Shield,
-      title: "Consulta Gratuita",
-      description: "Sin compromiso, evaluación completa"
-    },
-    {
-      icon: Award,
-      title: "Expertos Certificados",
-      description: "Más de 15 años de experiencia"
-    }
-  ]
+
 
   const contactMethods = [
     {
@@ -151,41 +135,30 @@ export default function ContactSection() {
   }
 
   return (
-    <section ref={sectionRef} id="contacto" className="py-20 bg-white relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#ff6b35]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#ff6b35]/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
+    <section 
+      ref={sectionRef} 
+      id="contacto" 
+      className="py-20 bg-fixed bg-cover bg-center relative"
+      style={{ backgroundImage: 'url(/drywall.jpg)' }}
+    >
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 bg-black/60"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      {/* Contenido con z-index para estar sobre el overlay */}
+      <div className="relative z-10">
+        <div className="container mx-auto px-4">
         {/* Hero Header */}
         <div className="text-center mb-16 scroll-reveal">
           <div className="inline-flex items-center gap-2 bg-[#ff6b35]/10 text-[#ff6b35] px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
             Consulta Gratuita Disponible
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6">
-            Transforma tu <span className="bg-gradient-to-r from-[#ff6b35] to-[#ff8c42] bg-clip-text text-transparent">visión</span> en realidad
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6">
+            <span className="text-primary">Contáctanos</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Agenda una consulta personalizada con nuestros expertos. Te ayudamos a planificar, diseñar y ejecutar tu proyecto con la más alta calidad.
           </p>
-          
-          {/* Benefits Row */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-            {benefits.map((benefit, index) => (
-              <div key={benefit.title} className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/20 scroll-reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-10 h-10 bg-[#ff6b35]/10 rounded-lg flex items-center justify-center">
-                  <benefit.icon className="w-5 h-5 text-[#ff6b35]" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-medium text-foreground">{benefit.title}</h4>
-                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Main Content Grid */}
@@ -491,47 +464,7 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* Final CTA with Social Proof */}
-        <div className="scroll-reveal">
-          <Card className="bg-gradient-to-r from-primary via-primary to-secondary text-white overflow-hidden relative">
-            <div className="absolute inset-0 bg-black/10"></div>
-            <CardContent className="p-8 md:p-12 relative z-10">
-              <div className="text-center">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
-                  ¿Listo para comenzar tu proyecto?
-                </h3>
-                <p className="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 max-w-3xl mx-auto">
-                  Únete a más de 500 clientes satisfechos que han confiado en TITAN Soluciones para sus proyectos más importantes.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 hover:scale-105 transition-all duration-200">
-                    <Phone className="mr-2 w-5 h-5" />
-                    Llamar: +51 992 027 156
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary bg-transparent hover:scale-105 transition-all duration-200">
-                    <MessageCircle className="mr-2 w-5 h-5" />
-                    WhatsApp Directo
-                  </Button>
-                </div>
-                
-                <div className="flex items-center justify-center gap-8 text-sm opacity-80">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4" />
-                    Respuesta en 24h
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4" />
-                    Consulta gratuita
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4" />
-                    Sin compromiso
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+
         </div>
       </div>
     </section>

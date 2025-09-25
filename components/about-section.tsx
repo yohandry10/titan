@@ -134,7 +134,7 @@ export default function AboutSection() {
                       })()}
                     </div>
                     <div className="text-center sm:text-left">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8">{tabs[activeTab].title}</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-8 sm:mb-12">{tabs[activeTab].title}</h3>
                       {tabs[activeTab].id === 'politicas' ? (
                         <div className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                           {tabs[activeTab].content.split('\n').map((policy, index) => (

@@ -143,11 +143,11 @@ export default function ObrasCivilesPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center">
             <Link
-              href="/servicios"
+              href="/proyectos"
               className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Volver a Proyectos
+              Volver a Servicios
             </Link>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Proyectos de <span className="text-primary">Obras Civiles</span>

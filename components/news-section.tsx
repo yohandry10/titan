@@ -249,35 +249,7 @@ export default function NewsSection() {
 
 
 
-        {/* Newsletter Subscription */}
-        <div className="mt-16 scroll-reveal">
-          <Card className="bg-gradient-to-r from-primary to-secondary text-white border-0 overflow-hidden relative">
-            <div className="absolute inset-0 bg-black/10"></div>
-            <CardContent className="p-8 md:p-12 relative z-10">
-              <div className="text-center max-w-2xl mx-auto">
-                <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
-                  Mantente Informado
-                </h3>
-                <p className="text-lg sm:text-xl opacity-90 mb-6 sm:mb-8">
-                  Suscríbete a nuestro boletín y recibe las últimas noticias, proyectos y oportunidades directamente en tu correo
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Tu correo electrónico"
-                    className="flex-1 px-4 py-3 rounded-lg text-foreground border-0 focus:ring-2 focus:ring-white/50 outline-none placeholder:text-white/70"
-                  />
-                  <Button variant="secondary" className="bg-white text-primary hover:bg-gray-100 px-8">
-                    Suscribirse
-                  </Button>
-                </div>
-                <p className="text-sm opacity-75 mt-4">
-                  No spam. Puedes cancelar tu suscripción en cualquier momento.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+
       </div>
     </section>
   )

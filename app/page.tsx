@@ -16,8 +16,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
       <ProjectsGallery />
+      <ServicesSection />
       <SocialResponsibility />
       <ClientsSection />
       <NewsSection />

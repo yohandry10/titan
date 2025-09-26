@@ -52,15 +52,15 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* ENLACES (ESCRITORIO): centrados respecto al VIEWPORT */}
-          <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[11]">
-            <div className="flex items-center justify-center space-x-8 xl:space-x-10">
+          {/* ENLACES (ESCRITORIO): movidos mucho más a la derecha para evitar superposición */}
+          <div className="hidden lg:block absolute left-[70%] xl:left-[60%] 2xl:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[11]">
+            <div className="flex items-center justify-center space-x-4 lg:space-x-5 xl:space-x-6 2xl:space-x-8">
               {navItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
                   className={`${isScrolled ? "text-[#3f4e55]" : "text-[#3f4e55]"
-                    } hover:text-primary transition-all duration-300 relative group font-medium text-base sm:text-lg xl:text-xl`}
+                    } hover:text-primary transition-all duration-300 relative group font-medium text-xs lg:text-sm xl:text-base 2xl:text-lg whitespace-nowrap`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
@@ -71,16 +71,18 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* CONTACTO: anclado a la DERECHA, no afecta el centrado */}
-          <div className="hidden xl:flex items-center space-x-4 ml-auto pr-4">
+          {/* CONTACTO: anclado a la DERECHA, muy compacto */}
+          <div className="hidden lg:flex items-center space-x-2 ml-auto pr-2 lg:pr-3 xl:pr-4">
             <div
-              className={`flex items-center space-x-2 text-sm xl:text-base ${isScrolled ? "text-[#3f4e55]" : "text-[#3f4e55]"
+              className={`flex items-center space-x-1 lg:space-x-2 text-xs lg:text-sm xl:text-base ${isScrolled ? "text-[#3f4e55]" : "text-[#3f4e55]"
                 } whitespace-nowrap`}
             >
-              <Phone className="w-4 h-4 xl:w-5 xl:h-5 flex-shrink-0" />
-              <span>+51 992 027 156</span>
+              <Phone className="w-3 h-3 lg:w-4 lg:h-4 flex-shrink-0" />
+              <span className="hidden 2xl:inline">+51 992 027 156</span>
+              <span className="hidden xl:inline 2xl:hidden">992 027 156</span>
+              <span className="lg:inline xl:hidden">992</span>
             </div>
-            <Button className="hover-glow px-4 py-2 xl:px-6 xl:py-3 text-sm xl:text-base relative overflow-hidden group whitespace-nowrap">
+            <Button className="hover-glow px-2 py-1 lg:px-3 lg:py-2 xl:px-4 xl:py-2 2xl:px-6 2xl:py-3 text-xs lg:text-sm xl:text-base relative overflow-hidden group whitespace-nowrap">
               <span className="relative z-10">Cotizar</span>
               <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Button>
@@ -125,10 +127,7 @@ export default function Navbar() {
                   {item.name}
                 </a>
               ))}
-              <div
-                className="pt-4 border-t border-border animate-menu-item-slide-in"
-                style={{ animationDelay: "0.5s" }}
-              >
+              <div className="pt-4 border-t border-border animate-menu-item-slide-in" style={{ animationDelay: "0.5s" }}>
                 <div className="flex items-center space-x-2 text-sm text-[#3f4e55] mb-3">
                   <Phone className="w-4 h-4" />
                   <span>+51 992 027 156</span>

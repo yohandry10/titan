@@ -114,7 +114,7 @@ export default function ProjectsGallery() {
 
         {/* CTA */}
         <div className="text-center mt-16 scroll-reveal">
-          <Link href="/proyectos">
+          <Link href="/servicios">
             <Button size="lg" className="hover-glow">
               Ver Todos los Proyectos
               <ExternalLink className="ml-2 w-5 h-5" />

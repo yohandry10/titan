@@ -336,7 +336,7 @@ export default function ServiciosPage() {
       {/* Features Section */}
       <div
         className="py-20 bg-fixed bg-cover bg-center relative"
-        style={{ backgroundImage: 'url(/hero.jpg)' }}
+        style={{ backgroundImage: 'url(/metal.png)' }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10">

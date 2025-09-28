@@ -63,18 +63,26 @@ export default function ProjectsGallery() {
   }
 
   return (
-    <section ref={sectionRef} id="proyectos" className="py-20 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section 
+      ref={sectionRef} 
+      id="proyectos" 
+      className="py-20 relative overflow-hidden bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: 'url(/hero.jpg)' }}
+    >
+      {/* Overlay oscuro igual que en /servicios */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 scroll-reveal">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Star className="w-4 h-4" />
             Proyectos Destacados
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Nuestros <span className="text-primary">Proyectos</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Nuestros <span className="text-orange-400">Proyectos</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-white max-w-4xl mx-auto leading-relaxed">
             Descubre algunos de nuestros proyectos más destacados que demuestran nuestra experiencia y compromiso con la excelencia.
           </p>
         </div>
@@ -84,7 +92,7 @@ export default function ProjectsGallery() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="hover-lift overflow-hidden h-full flex flex-col bg-white rounded-2xl shadow-lg border border-gray-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300"
+              className="hover-lift overflow-hidden h-full flex flex-col bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/40 hover:border-primary/50 hover:shadow-3xl transition-all duration-300"
             >
               {/* Imagen EXACTAMENTE igual que en las otras páginas */}
               <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 project-image-container">
@@ -115,7 +123,7 @@ export default function ProjectsGallery() {
         {/* CTA */}
         <div className="text-center mt-16 scroll-reveal">
           <Link href="/servicios">
-            <Button size="lg" className="hover-glow">
+            <Button size="lg" className="hover-glow bg-white text-gray-900 hover:bg-gray-100 shadow-xl hover:shadow-2xl">
               Ver Todos los Proyectos
               <ExternalLink className="ml-2 w-5 h-5" />
             </Button>

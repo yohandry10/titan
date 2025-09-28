@@ -47,7 +47,7 @@ export default function ObrasCivilesPage() {
     {
       title: "Habilitación y mantenimiento de vías de acceso",
       description: "Construcción y mantenimiento de vías de acceso para proyectos industriales y mineros",
-      image: "/i11.jpg",
+      image: "/calle2.jpeg",
       details: [
         "Habilitación de nuevas vías de acceso",
         "Mantenimiento preventivo y correctivo",
@@ -58,7 +58,7 @@ export default function ObrasCivilesPage() {
     {
       title: "Construcción de vías de acceso",
       description: "Construcción integral de vías vehiculares, carrozables y peatonales",
-      image: "/i1.jpg",
+      image: "/mejoramiento.webp",
       details: [
         "Vías vehiculares para tráfico pesado",
         "Vías carrozables para acceso industrial",
@@ -69,7 +69,7 @@ export default function ObrasCivilesPage() {
     {
       title: "Sistemas de evacuación de aguas pluviales",
       description: "Construcción de sistemas de drenaje a canal abierto para manejo de aguas",
-      image: "/agua.jpg",
+      image: "/3.jpg",
       details: [
         "Diseño hidráulico especializado",
         "Excavación de canales de drenaje",
@@ -80,7 +80,7 @@ export default function ObrasCivilesPage() {
     {
       title: "Construcción de terraplenes y plataformas",
       description: "Construcción de terraplenes y plataformas para infraestructura industrial",
-      image: "/movi.jpeg",
+      image: "/conasarc.jpg",
       details: [
         "Terraplenes para carreteras y accesos",
         "Plataformas industriales niveladas",
@@ -91,7 +91,7 @@ export default function ObrasCivilesPage() {
     {
       title: "Construcción de lozas y veredas de concreto",
       description: "Construcción de estructuras de concreto para pavimentos y veredas",
-      image: "/3.jpg",
+      image: "/call3.jpeg",
       details: [
         "Lozas de concreto armado",
         "Veredas peatonales durables",
@@ -102,7 +102,7 @@ export default function ObrasCivilesPage() {
     {
       title: "Alcantarillado y saneamiento",
       description: "Sistemas completos de alcantarillado y saneamiento para proyectos urbanos",
-      image: "/alcantarillado.jpg",
+      image: "/losa.jpeg",
       details: [
         "Redes de alcantarillado sanitario",
         "Sistemas de tratamiento de aguas",

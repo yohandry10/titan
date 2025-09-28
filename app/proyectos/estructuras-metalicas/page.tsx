@@ -36,7 +36,7 @@ export default function EstructurasMetalicasPage() {
     {
       title: "Ingeniería de detalle y planos de fabricación",
       description: "Desarrollo de ingeniería especializada y documentación técnica para fabricación",
-      image: "/plano.png",
+      image: "/titan1.jpg",
       details: [
         "Planos de fabricación detallados",
         "Cálculos estructurales especializados",
@@ -47,7 +47,7 @@ export default function EstructurasMetalicasPage() {
     {
       title: "Cálculo y diseño de estructuras",
       description: "Análisis estructural y diseño de elementos metálicos complejos",
-      image: "/INDUSTRIAL.png",
+      image: "/estructura.jpeg",
       details: [
         "Análisis de cargas y resistencia",
         "Diseño sismorresistente",
@@ -58,7 +58,7 @@ export default function EstructurasMetalicasPage() {
     {
       title: "Montaje y alineamiento de estructuras",
       description: "Montaje preciso y alineamiento de estructuras metálicas industriales",
-      image: "/Montaje.jpg",
+      image: "/escalera1.jpeg",
       details: [
         "Montaje con equipos especializados",
         "Alineamiento de alta precisión",
@@ -69,7 +69,7 @@ export default function EstructurasMetalicasPage() {
     {
       title: "Fabricación y montaje de estructuras",
       description: "Proceso integral desde fabricación hasta montaje final",
-      image: "/fabricacion.png",
+      image: "/escalera.jpeg",
       details: [
         "Fabricación en taller especializado",
         "Control de calidad en fabricación",
@@ -91,7 +91,7 @@ export default function EstructurasMetalicasPage() {
     {
       title: "Fabricación de chutes, guardas y coberturas",
       description: "Elementos de protección y manejo de materiales industriales",
-      image: "/2.jpg",
+      image: "/nave.jpeg",
       details: [
         "Chutes para manejo de materiales",
         "Guardas de seguridad industrial",
@@ -102,7 +102,7 @@ export default function EstructurasMetalicasPage() {
     {
       title: "Construcción y montaje de naves industriales",
       description: "Construcción completa de naves industriales de gran envergadura",
-      image: "/estructura.png",
+      image: "/Montaje.jpg",
       details: [
         "Naves industriales completas",
         "Sistemas de ventilación",

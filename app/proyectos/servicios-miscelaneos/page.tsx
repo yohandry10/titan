@@ -47,7 +47,7 @@ export default function ServiciosMiscelaneos() {
     {
       title: "Trabajos de albañilería, carpintería y gasfitería",
       description: "Servicios especializados en acabados y instalaciones domiciliarias",
-      image: "/arbañileria.png",
+      image: "/albañol.jpeg",
       details: [
         "Albañilería y acabados",
         "Trabajos de carpintería especializada",
@@ -80,7 +80,7 @@ export default function ServiciosMiscelaneos() {
     {
       title: "Mantenimiento preventivo, correctivo y renovación de infraestructuras",
       description: "Servicios completos de mantenimiento y renovación de infraestructuras",
-      image: "/estructura.png",
+      image: "/electric.jpeg",
       details: [
         "Mantenimiento preventivo programado",
         "Mantenimiento correctivo de emergencia",
@@ -102,7 +102,7 @@ export default function ServiciosMiscelaneos() {
     {
       title: "Instalación de coberturas de lona",
       description: "Instalación de sistemas de cobertura temporal y permanente",
-      image: "/lona.png",
+      image: "/image.jpeg",
       details: [
         "Coberturas temporales de protección",
         "Lonas industriales resistentes",

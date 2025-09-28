@@ -1,98 +1,180 @@
 "use client"
 
 import { ChevronRight, ArrowRight, Star, Award, Shield, Clock } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function ServiciosPage() {
 
   const projects = [
     {
       id: 1,
-      empresa: 'CONSORCIO PIRAMIDE',
-      servicio: 'CONSTRUCCION DE INFRAESTRUCTURA VIAL EN LA ASOCIACION DE VIVIENDA LA PRADERA III Y IV ETAPA DISTRITO CORONEL GREGORIO ALBARRACIN LANCHIPA-TACNA',
-      periodo: 'Marzo – Setiembre 2016',
-      imagen: '/carretera-asfaltado.jpg'
+      title: 'CONSORCIO PIRAMIDE',
+      description: 'CONSTRUCCION DE INFRAESTRUCTURA VIAL EN LA ASOCIACION DE VIVIENDA LA PRADERA III Y IV ETAPA DISTRITO CORONEL GREGORIO ALBARRACIN LANCHIPA-TACNA',
+      image: '/obra.jpeg',
+      details: [
+        'Proyecto ejecutado #1',
+        'Período: Marzo – Setiembre 2016',
+        'Construcción de infraestructura vial completa',
+        'Cumplimiento de plazos garantizado'
+      ]
     },
     {
       id: 2,
-      empresa: 'CONSORCIO PUENTE ANTACCARA',
-      servicio: 'CREACION DEL PUENTE CARROZABLE ANTACCARA EN EL SECTOR DE HUAYLLUMAYO DE LA COMUNIDAD CAMPESINA DE ALTO AYRACCOLLANA, DISTRITO DE COPORAQUE – ESPINAR, CUSCO',
-      periodo: 'Setiembre 2015',
-      imagen: '/Mejoramiento-de-carretera-obras-compressed.jpg.webp'
+      title: 'CONSORCIO PUENTE ANTACCARA',
+      description: 'CREACION DEL PUENTE CARROZABLE ANTACCARA EN EL SECTOR DE HUAYLLUMAYO DE LA COMUNIDAD CAMPESINA DE ALTO AYRACCOLLANA, DISTRITO DE COPORAQUE – ESPINAR, CUSCO',
+      image: '/puente.jpeg',
+      details: [
+        'Proyecto ejecutado #2',
+        'Período: Setiembre 2015',
+        'Ubicación: Distrito de Coporaque - Espinar, Cusco',
+        'Puente carrozable de gran envergadura'
+      ]
     },
     {
       id: 3,
-      empresa: 'MUNICIPALIDAD DISTRITAL DE HUAMBO',
-      servicio: 'SERVICIO DE REFORMULACION DE EXPEDIENTE TECNICO MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN EL CAMINO VECINAL KM 4+404 DE LA CARRETERA YANACOTO SAJARHUA - DISTRITO DE HUAMBO, PROVINCIA DE CAYLLOMA, AREQUIPA.',
-      ubicacion: 'DISTRITO DE HUAMBO, PROVINCIA DE CAYLLOMA, AREQUIPA',
-      periodo: 'Noviembre 2018',
-      imagen: '/civil-construction-projects.jpg'
+      title: 'MUNICIPALIDAD DISTRITAL DE HUAMBO',
+      description: 'SERVICIO DE REFORMULACION DE EXPEDIENTE TECNICO MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN EL CAMINO VECINAL KM 4+404 DE LA CARRETERA YANACOTO SAJARHUA',
+      image: '/civil-construction-projects.jpg',
+      details: [
+        'Proyecto ejecutado #3',
+        'Período: Noviembre 2018',
+        'Ubicación: Distrito de Huambo, Provincia de Caylloma, Arequipa',
+        'Reformulación de expediente técnico especializado'
+      ]
     },
     {
       id: 4,
-      empresa: 'GOBIERNO REGIONAL DE AREQUIPA',
-      servicio: 'SERVICIO DE ELABORACION DEL EXPEDIENTE TECNICO "MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN EL TRAMO 2- 358 CALLE PRINCIPAL S/N DESDE EL ARCO HASTA EL INICIO DE TROCHA, DEL DISTRITO DE POCSI, PROVINCIA AREQUIPA, REGION AREQUIPA"',
-      ubicacion: 'DISTRITO DE POCSI, AREQUIPA, REGION AREQUIPA',
-      periodo: 'Octubre 2018',
-      imagen: '/agua.jpg'
+      title: 'GOBIERNO REGIONAL DE AREQUIPA',
+      description: 'SERVICIO DE ELABORACION DEL EXPEDIENTE TECNICO MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN EL TRAMO 2-358 CALLE PRINCIPAL S/N DESDE EL ARCO HASTA EL INICIO DE TROCHA',
+      image: '/titan.jpeg',
+      details: [
+        'Proyecto ejecutado #4',
+        'Período: Octubre 2018',
+        'Ubicación: Distrito de Pocsi, Arequipa',
+        'Elaboración de expediente técnico completo'
+      ]
     },
     {
       id: 5,
-      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
-      servicio: 'SERVICIO DE SOLDADURA PARA REPARACION DE JUEGOS INFANTILES, CERCO Y PUERTAS METALICAS EN PARQUES CMT 8-10 P.J.ISRAEL, PARQUE ENTRE LA CALLE VIRGEN DE CHAPI MZ"N" CIUDAD BLANCA,PARQUE DEL NIÑO (LOS SENTIDOS)INCLUYE TODOS LOS MAT. METAL,SOLDAD.Y OTROS',
-      ubicacion: 'AREQUIPA',
-      periodo: 'Octubre 2018',
-      imagen: '/metalica.png'
+      title: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      description: 'SERVICIO DE SOLDADURA PARA REPARACION DE JUEGOS INFANTILES, CERCO Y PUERTAS METALICAS EN PARQUES CMT 8-10 P.J.ISRAEL, PARQUE ENTRE LA CALLE VIRGEN DE CHAPI',
+      image: '/calle1.jpeg',
+      details: [
+        'Proyecto ejecutado #5',
+        'Período: Octubre 2018',
+        'Ubicación: Arequipa',
+        'Reparación y mantenimiento de infraestructura recreativa'
+      ]
     },
     {
       id: 6,
-      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
-      servicio: 'SERVICIO MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE JUEGOS INFANTILES EN FIBRA DE VIDRIO EN PARQUES Y JARDINES. SEGUN ORDEN DE SERVICIO 574.',
-      ubicacion: 'AREQUIPA',
-      periodo: 'Setiembre 2018',
-      imagen: '/mantenimiento.png'
+      title: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      description: 'SERVICIO MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE JUEGOS INFANTILES EN FIBRA DE VIDRIO EN PARQUES Y JARDINES. SEGUN ORDEN DE SERVICIO 574.',
+      image: '/parque2.jpeg',
+      details: [
+        'Proyecto ejecutado #6',
+        'Período: Setiembre 2018',
+        'Ubicación: Arequipa',
+        'Mantenimiento especializado de juegos infantiles'
+      ]
     },
     {
       id: 7,
-      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
-      servicio: 'SERVICIO DE PINTADO DE AMBIENTES, SERVICIO DE PINTADO DEL MANTENIMIENTO DENOMINADO MANTENIMIENTO DEL ESTADIO RECREACIONAL DEL NIÑO DEL DISTRITO DE PAUCARPATA, SEGUN ORDEN DE SERVICIO NRO 705.',
-      ubicacion: 'AREQUIPA',
-      periodo: 'Octubre 2024',
-      imagen: '/arbañileria.png'
+      title: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      description: 'SERVICIO DE PINTADO DE AMBIENTES, SERVICIO DE PINTADO DEL MANTENIMIENTO DENOMINADO MANTENIMIENTO DEL ESTADIO RECREACIONAL DEL NIÑO DEL DISTRITO DE PAUCARPATA',
+      image: '/parque.jpeg',
+      details: [
+        'Proyecto ejecutado #7',
+        'Período: Octubre 2024',
+        'Ubicación: Arequipa',
+        'Pintado y mantenimiento de instalaciones deportivas'
+      ]
     },
     {
       id: 8,
-      empresa: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
-      servicio: 'SERVICIO DE MANTENIMIENTO DE CESPED NATURAL,SERVICIO DE ASENTADO DE BLOCK GRASS NATURAL DEL MANTENIMIENTO Y ACONDICIONAMIENTO DEL ESTADIO CIUDAD BLANCA DEL DISTRITO DE PAUCARPATA, SEGUN ORDEN DE SERVICIO NRO 703.',
-      ubicacion: 'AREQUIPA',
-      periodo: 'Octubre 2018',
-      imagen: '/complejo.jpg'
+      title: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      description: 'SERVICIO DE MANTENIMIENTO DE CESPED NATURAL,SERVICIO DE ASENTADO DE BLOCK GRASS NATURAL DEL MANTENIMIENTO Y ACONDICIONAMIENTO DEL ESTADIO CIUDAD BLANCA',
+      image: '/barriendo.jpeg',
+      details: [
+        'Proyecto ejecutado #8',
+        'Período: Octubre 2018',
+        'Ubicación: Arequipa',
+        'Mantenimiento de césped y acondicionamiento deportivo'
+      ]
     },
     {
       id: 9,
-      empresa: 'COSAPI S.A.',
-      servicio: 'SERVICIO DE ALQUILER DE GRUA HIDRAULICA ARTICULADA SOBRE CAMION 6X4 DE 14 TN. 16 HRM PRECIO UNIT S/172.',
-      ubicacion: 'AREQUIPA',
-      periodo: 'Setiembre 2018',
-      imagen: '/estructura11.png'
+      title: 'COSAPI S.A.',
+      description: 'SERVICIO DE ALQUILER DE GRUA HIDRAULICA ARTICULADA SOBRE CAMION 6X4 DE 14 TN. 16 HRM PRECIO UNIT S/172.',
+      image: '/montaje3.jpeg',
+      details: [
+        'Proyecto ejecutado #9',
+        'Período: Setiembre 2018',
+        'Ubicación: Arequipa',
+        'Alquiler de maquinaria especializada'
+      ]
     },
     {
       id: 10,
-      empresa: 'COSAPI S.A.',
-      servicio: 'SUMINISTRO E INSTALACION DE IMPERMEABILIZANTE',
-      ubicacion: 'AREQUIPA',
-      periodo: 'Abril 2018',
-      imagen: '/geomembrana.png'
+      title: 'COSAPI S.A.',
+      description: 'SUMINISTRO E INSTALACION DE IMPERMEABILIZANTE',
+      image: '/piso.jpeg',
+      details: [
+        'Proyecto ejecutado #10',
+        'Período: Abril 2018',
+        'Ubicación: Arequipa',
+        'Suministro e instalación especializada'
+      ]
     },
     {
       id: 11,
-      empresa: 'COSAPI S.A.',
-      servicio: 'SERVICIO DE MOVIMIENTO DE TIERRA',
-      ubicacion: 'AREQUIPA',
-      periodo: 'Abril 2018',
-      imagen: '/compactacion-de-terraplen-276316.webp'
+      title: 'COSAPI S.A.',
+      description: 'SERVICIO DE MOVIMIENTO DE TIERRA',
+      image: '/monta.jpeg',
+      details: [
+        'Proyecto ejecutado #11',
+        'Período: Abril 2018',
+        'Ubicación: Arequipa',
+        'Movimiento de tierras con maquinaria especializada'
+      ]
+    },
+    {
+      id: 12,
+      title: 'COSAPI S.A.',
+      description: 'SERVICIO DE RECOLECCION Y ELIMINACION DE MATERIALES EXCEDENTES',
+      image: '/monta1.jpeg',
+      details: [
+        'Proyecto ejecutado #12',
+        'Período: Abril 2018',
+        'Ubicación: Arequipa',
+        'Recolección y eliminación de materiales'
+      ]
+    },
+    {
+      id: 13,
+      title: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      description: 'ADQUISICION DE INSUMOS PARA PINTADO',
+      image: '/pintura.jpeg',
+      details: [
+        'Proyecto ejecutado #13',
+        'Período: Marzo 2018',
+        'Ubicación: Arequipa',
+        'Adquisición de insumos especializados'
+      ]
+    },
+    {
+      id: 14,
+      title: 'MUNICIPALIDAD DISTRITAL DE PAUCARPATA',
+      description: 'ADQUISICION DE INSUMOS DE SISTEMA DE RIEGO',
+      image: '/montaje2.jpeg',
+      details: [
+        'Proyecto ejecutado #14',
+        'Período: Marzo 2018',
+        'Ubicación: Arequipa',
+        'Sistemas de riego especializados'
+      ]
     }
   ]
-
 
   const features = [
     { icon: Award, title: 'Calidad Certificada', description: 'Estándares internacionales ISO' },
@@ -100,8 +182,6 @@ export default function ServiciosPage() {
     { icon: Clock, title: 'Entrega Puntual', description: 'Cumplimiento de plazos garantizado' },
     { icon: Star, title: 'Excelencia Técnica', description: 'Equipo de ingenieros especializados' }
   ]
-
-
 
   const handleWhatsAppClick = (service?: string) => {
     const message = service
@@ -173,73 +253,49 @@ export default function ServiciosPage() {
         </div>
       </div>
 
-
-      {/* Projects Section */}
-      <div id="servicios-detalle" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-8">
+      {/* Projects Section - EXACTAMENTE IGUAL QUE /PROYECTOS */}
+      <section id="servicios-detalle" className="py-20">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-6xl font-bold text-black mb-6">
-              Proyectos <span className="text-orange-500">Ejecutados</span>
-            </h2>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-              Cada proyecto refleja nuestro compromiso con la excelencia, calidad y cumplimiento de plazos
+            <h2 className="text-4xl font-bold text-foreground mb-4">Proyectos Ejecutados</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Cada proyecto refleja nuestro compromiso con la excelencia, calidad y cumplimiento de plazos.
             </p>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div key={project.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                {/* Project Image */}
-                <div className="relative h-80 overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <div key={project.id} className="bg-white rounded-2xl shadow-lg border border-gray-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col hover:transform hover:-translate-y-2">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
                   <img
-                    src={project.imagen}
-                    alt={`Proyecto ${project.empresa}`}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                    onError={(e) => {
-                      e.currentTarget.src = '/placeholder.svg';
-                    }}
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Proyecto #{project.id}
-                    </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2 line-clamp-2">{project.title}</h3>
                   </div>
                 </div>
-
-                {/* Project Content */}
-                <div className="p-6">
-                  <div className="mb-4">
-                    <span className="text-lg font-bold text-orange-600 uppercase tracking-wide">EMPRESA/ENTIDAD:</span>
-                    <h3 className="text-xl font-bold text-gray-900 mt-2 leading-tight">{project.empresa}</h3>
-                  </div>
-
-                  <div className="mb-4">
-                    <span className="text-lg font-bold text-orange-600 uppercase tracking-wide">SERVICIO:</span>
-                    <p className="text-base text-gray-800 leading-relaxed mt-2">{project.servicio}</p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-4 mt-4">
-                    {project.ubicacion && (
-                      <div className="flex-1 min-w-0">
-                        <span className="text-sm font-bold text-orange-600 uppercase tracking-wide">UBICACIÓN:</span>
-                        <p className="text-base text-gray-700 mt-1">{project.ubicacion}</p>
-                      </div>
-                    )}
-                    {project.periodo && (
-                      <div className="flex-shrink-0">
-                        <span className="text-sm font-bold text-orange-600 uppercase tracking-wide">PERÍODO:</span>
-                        <p className="text-base font-semibold text-white mt-1 bg-orange-500 px-3 py-1 rounded-lg">{project.periodo}</p>
-                      </div>
-                    )}
+                <div className="p-6 flex flex-col flex-grow">
+                  <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-3">Características del proyecto:</h4>
+                    <ul className="space-y-2">
+                      {project.details.map((detail, idx) => (
+                        <li key={idx} className="text-sm text-gray-600 flex items-start">
+                          <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Process Section */}
       <div className="py-20 bg-white">
@@ -282,10 +338,7 @@ export default function ServiciosPage() {
         className="py-20 bg-fixed bg-cover bg-center relative"
         style={{ backgroundImage: 'url(/hero.jpg)' }}
       >
-        {/* Overlay oscuro */}
         <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Contenido con z-index para estar sobre el overlay */}
         <div className="relative z-10">
           <div className="max-w-6xl mx-auto px-8">
             <div className="text-center mb-16">
@@ -316,7 +369,6 @@ export default function ServiciosPage() {
               })}
             </div>
 
-            {/* Additional Benefits */}
             <div className="mt-16 grid md:grid-cols-3 gap-8">
               {[
                 { title: 'Tecnología Avanzada', description: 'Equipos de última generación y software especializado', icon: '🚀' },
@@ -411,7 +463,6 @@ export default function ServiciosPage() {
             </a>
           </div>
 
-          {/* Contact Info */}
           <div className="grid md:grid-cols-3 gap-8 text-white/90">
             <div className="flex items-center justify-center">
               <span className="mr-3">📞</span>

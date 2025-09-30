@@ -177,27 +177,7 @@ export default function ClientsSection() {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <div className="mt-12 sm:mt-16 text-center scroll-reveal">
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-8 md:p-12 shadow-lg">
-            <blockquote className="text-base sm:text-lg md:text-xl text-foreground font-medium mb-4 sm:mb-6 leading-relaxed">
-              "TITAN Soluciones ha demostrado ser un socio estratégico confiable, entregando proyectos de alta calidad dentro de los plazos establecidos y cumpliendo con todos los estándares de seguridad requeridos."
-            </blockquote>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center">
-                <img
-                  src="/arequiopa.png"
-                  alt="Gobierno Regional de Arequipa"
-                  className="max-h-20 sm:max-h-24 md:max-h-28 w-auto object-contain"
-                />
-              </div>
-              <div className="text-center sm:text-left">
-                <div className="font-semibold text-foreground text-sm sm:text-base">Gobierno Regional</div>
-                <div className="text-muted-foreground text-xs sm:text-sm">Arequipa, Perú</div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   )

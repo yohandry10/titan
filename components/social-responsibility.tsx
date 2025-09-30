@@ -115,7 +115,7 @@ export default function SocialResponsibility() {
         <div className="mt-12 sm:mt-16 scroll-reveal">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
             <img
-              src="/social.jpg"
+              src="/matas.png"
               alt="Responsabilidad Social"
               className="w-full h-48 sm:h-64 md:h-96 object-cover"
             />

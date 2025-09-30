@@ -154,7 +154,7 @@ export default function ContactSection() {
             Consulta Gratuita Disponible
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6">
-            <span className="text-primary">Contáctanos</span>
+            <span className="text-white">Contáctanos</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Agenda una consulta personalizada con nuestros expertos. Te ayudamos a planificar, diseñar y ejecutar tu proyecto con la más alta calidad.
@@ -410,7 +410,7 @@ export default function ContactSection() {
               <CardContent className="p-0">
                 <div className="h-80 rounded-xl overflow-hidden relative">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.293943180824!2d-71.56170572368367!3d-16.40989118432005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a888d617b17%3A0x3c2a9519598cdb59!2sAv.%20Fernandini%20142%2C%20Sachaca%2004013!5e0!3m2!1ses-419!2spe!4v1758405032386!5m2!1ses-419!2spe" 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3827.2557012428897!2d-71.559952!3d-16.411835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDI0JzQyLjYiUyA3McKwMzMnMzUuOCJX!5e0!3m2!1ses-419!2spe!4v1759251847093!5m2!1ses-419!2spe" 
                     width="100%" 
                     height="100%" 
                     style={{border: 0}} 

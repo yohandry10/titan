@@ -24,10 +24,7 @@ export default function AboutSection() {
       { threshold: 0.1 },
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
 
@@ -38,49 +35,36 @@ export default function AboutSection() {
       id: "mision",
       title: "Misión",
       icon: Target,
-      content: "Crear soluciones objetivas con calidad y eficiencia mediante la reingeniería. priorizando el bienestar de los colaboradores y el desarrollo sostenible, generando compromiso con el medio ambiente y las comunidades sin olvidar la seguridad de todas las personas relacionadas directa o indirectamente con nuestras actividades.",
+      content:
+        "Crear soluciones objetivas con calidad y eficiencia mediante la reingeniería. priorizando el bienestar de los colaboradores y el desarrollo sostenible, generando compromiso con el medio ambiente y las comunidades sin olvidar la seguridad de todas las personas relacionadas directa o indirectamente con nuestras actividades.",
       color: "from-[#2a313b]/5 to-[#2a313b]/10",
-      iconColor: "text-primary"
+      iconColor: "text-primary",
     },
     {
-      id: "vision", 
+      id: "vision",
       title: "Visión",
       icon: Eye,
-      content: "Ser el mejor referente en el sector de minería, industria y construcción siendo reconocidos por nuestros clientes como la mejor opción, utilizando tecnología de vanguardia optimizando costos y procesos; para mejorar la eficiencia de cada uno de nuestros proyectos.",
+      content:
+        "Ser el mejor referente en el sector de minería, industria y construcción siendo reconocidos por nuestros clientes como la mejor opción, utilizando tecnología de vanguardia optimizando costos y procesos; para mejorar la eficiencia de cada uno de nuestros proyectos.",
       color: "from-[#2a313b]/5 to-[#2a313b]/10",
-      iconColor: "text-primary"
+      iconColor: "text-primary",
     },
     {
       id: "politicas",
       title: "Políticas",
       icon: Award,
-      content: "• Política de calidad\n• Política de seguridad y salud en el trabajo\n• Política ambiental\n• Política de ética y antisoborno",
-      color: "from-[#2a313b]/5 to-[#2a313b]/10", 
-      iconColor: "text-primary"
-    }
+      content:
+        "• Política de calidad\n• Política de seguridad y salud en el trabajo\n• Política ambiental\n• Política de ética y antisoborno",
+      color: "from-[#2a313b]/5 to-[#2a313b]/10",
+      iconColor: "text-primary",
+    },
   ]
 
   const values = [
-    {
-      icon: Shield,
-      title: "Seguridad",
-      description: "Priorizamos la seguridad en cada proyecto, cumpliendo con los más altos estándares.",
-    },
-    {
-      icon: Award,
-      title: "Calidad",
-      description: "Garantizamos la excelencia en todos nuestros servicios y entregas.",
-    },
-    {
-      icon: Users,
-      title: "Compromiso",
-      description: "Trabajamos con dedicación para superar las expectativas de nuestros clientes.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovación",
-      description: "Implementamos tecnología de vanguardia en nuestros procesos.",
-    },
+    { icon: Shield, title: "Seguridad", description: "Priorizamos la seguridad en cada proyecto, cumpliendo con los más altos estándares." },
+    { icon: Award, title: "Calidad", description: "Garantizamos la excelencia en todos nuestros servicios y entregas." },
+    { icon: Users, title: "Compromiso", description: "Trabajamos con dedicación para superar las expectativas de nuestros clientes." },
+    { icon: Lightbulb, title: "Innovación", description: "Implementamos tecnología de vanguardia en nuestros procesos." },
   ]
 
   return (
@@ -92,12 +76,15 @@ export default function AboutSection() {
             ¿Por qué elegir <span className="text-primary">TITAN SOLUCIONES</span>?
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            La sinergia de nuestro talento humano es la fórmula de éxito que nos encamina a posicionarnos como la mejor
-            alternativa para cada proyecto.
+            Somos una empresa perteneciente al Grupo Vierdes, dedicada a brindar servicios en los sectores de minería, construcción e industria,
+            cumpliendo con los más altos estándares de seguridad, calidad y responsabilidad ambiental. Nos enfocamos en culminar cada proyecto con la
+            plena satisfacción de nuestros clientes, trabajando de manera socialmente responsable. Nuestro equipo multidisciplinario de profesionales
+            y técnicos especializados respalda cada proceso, asegurando el cumplimiento de las normas técnicas y legales. La sinergia de nuestro
+            talento humano es la clave que nos posiciona como la mejor alternativa para las necesidades de cada proyecto.
           </p>
         </div>
 
-        {/* Interactive Tab Section - Misión, Visión, Políticas */}
+        {/* Tabs */}
         <div className="mb-20 sm:mb-24 scroll-reveal">
           <Card className="bg-white shadow-xl border-0 overflow-hidden">
             <CardContent className="p-0">
@@ -108,41 +95,55 @@ export default function AboutSection() {
                     key={tab.id}
                     onClick={() => setActiveTab(index)}
                     className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 text-left transition-all duration-300 ${
-                      activeTab === index
-                        ? "bg-gray-50 border-b-2 border-primary"
-                        : "hover:bg-gray-50/50"
+                      activeTab === index ? "bg-gray-50 border-b-2 border-primary" : "hover:bg-gray-50/50"
                     }`}
                   >
-                    <div className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-3">
-                      <tab.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${activeTab === index ? tab.iconColor : "text-gray-400"}`} />
-                      <span className={`font-medium text-sm sm:text-base ${activeTab === index ? "text-primary" : "text-gray-600"}`}>
+                    {/* AUMENTAMOS LA SEPARACIÓN ICONO–TEXTO */}
+                    <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
+                      <tab.icon
+                        className={`w-4 h-4 sm:w-5 sm:h-5 ${
+                          activeTab === index ? tab.iconColor : "text-gray-400"
+                        }`}
+                      />
+                      <span
+                        className={`font-medium text-sm sm:text-base ${
+                          activeTab === index ? "text-primary" : "text-gray-600"
+                        }`}
+                      >
                         {tab.title}
                       </span>
                     </div>
                   </button>
                 ))}
               </div>
-              
+
               {/* Tab Content */}
               <div className="p-4 sm:p-6 md:p-8">
                 <div className={`bg-gradient-to-br ${tabs[activeTab].color} rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-100`}>
-                  <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
-                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0`}>
+                  {/* AUMENTAMOS LA SEPARACIÓN BLOQUE ICONO–TEXTO */}
+                  <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 lg:gap-10">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
                       {(() => {
                         const IconComponent = tabs[activeTab].icon
                         return <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 ${tabs[activeTab].iconColor}`} />
                       })()}
                     </div>
+
                     <div className="text-center sm:text-left">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-8 sm:mb-12">{tabs[activeTab].title}</h3>
-                      {tabs[activeTab].id === 'politicas' ? (
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">{tabs[activeTab].title}</h3>
+
+                      {tabs[activeTab].id === "politicas" ? (
                         <div className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                          {tabs[activeTab].content.split('\n').map((policy, index) => (
-                            <p key={index} className="mb-2">{policy}</p>
+                          {tabs[activeTab].content.split("\n").map((policy, i) => (
+                            <p key={i} className="mb-2">
+                              {policy}
+                            </p>
                           ))}
                         </div>
                       ) : (
-                        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{tabs[activeTab].content}</p>
+                        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                          {tabs[activeTab].content}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -160,11 +161,7 @@ export default function AboutSection() {
         {/* Values */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {values.map((value, index) => (
-            <Card
-              key={value.title}
-              className="hover-lift scroll-reveal text-center group bg-white shadow-lg"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+            <Card key={value.title} className="hover-lift scroll-reveal text-center group bg-white shadow-lg" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-4 sm:p-6">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
                   <value.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
@@ -174,17 +171,6 @@ export default function AboutSection() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Company Description */}
-        <div className="mt-16 sm:mt-20 text-center scroll-reveal">
-          <div className="max-w-4xl mx-auto px-4">
-            <p className="text-base sm:text-lg text-foreground leading-relaxed font-medium">
-              Contamos con un equipo multidisciplinario de profesionales y especialistas técnicos calificados, lo cual
-              respalda nuestros procesos y el cumplimiento de las normas técnicas y legales. Nuestro compromiso es
-              brindar soluciones integrales que generen valor agregado a cada proyecto.
-            </p>
-          </div>
         </div>
       </div>
     </section>

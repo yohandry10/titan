@@ -155,14 +155,7 @@ export default function ServicesSection() {
                               e.currentTarget.src = '/placeholder.svg';
                             }}
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
-                              <Button size="sm" variant="secondary" className="w-full text-xs sm:text-sm">
-                                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                                Ver Proyecto
-                              </Button>
-                            </div>
-                          </div>
+
                           <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                             <span className="bg-primary text-white px-2 py-1 rounded text-xs font-medium">
                               {project.category}

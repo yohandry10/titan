@@ -35,10 +35,10 @@ export default function ProyectosPage() {
 
   const projectCategories = [
     {
-      title: "Proyectos de Obras Civiles",
+      title: "Obras Civiles",
       description: "Construcción de infraestructura civil con los más altos estándares de calidad",
       href: "/proyectos/obras-civiles",
-      image: "/obra.png",
+      image: "/proyecto.png",
       projects: [
         "Excavaciones y movimiento de tierras",
         "Habilitación y mantenimiento de vías de acceso",
@@ -52,7 +52,7 @@ export default function ProyectosPage() {
       ],
     },
     {
-      title: "Estructuras Metálicas y servicio de metalmecanica",
+      title: "Estructuras Metálicas y metalmecanica",
       description: "Diseño, fabricación y montaje de estructuras metálicas industriales",
       href: "/proyectos/estructuras-metalicas",
       image: "/metalica.png",
@@ -64,12 +64,12 @@ export default function ProyectosPage() {
         "Fabricación e instalación de escaleras industriales, vigas, techos y pórticos",
         "Fabricación de chutes, guardas y coberturas",
         "Construcción y montaje de naves industriales",
-        "Soldadura especializada y certificada",
-        "Reforzamiento de estructuras existentes",
+
+
       ],
     },
     {
-      title: "Servicios Misceláneos",
+      title: "Misceláneos",
       description: "Servicios complementarios de construcción y mantenimiento",
       href: "/proyectos/servicios-miscelaneos",
       image: "/estructura.png",
@@ -92,7 +92,7 @@ export default function ProyectosPage() {
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/site.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/titan.jpeg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center">
@@ -101,12 +101,8 @@ export default function ProyectosPage() {
               Volver al inicio
             </Link>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Nuestros <span className="text-primary">Servicios</span>
+              Nuestros Servicios
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Descubre la excelencia en cada uno de nuestros proyectos de construcción, estructuras metálicas y
-              servicios especializados.
-            </p>
           </div>
         </div>
       </section>
@@ -129,7 +125,7 @@ export default function ProyectosPage() {
                   <h3 className="text-2xl font-bold text-foreground mb-3">{category.title}</h3>
                   <p className="text-muted-foreground mb-4">{category.description}</p>
                   <div className="mb-6 flex-grow">
-                    <h4 className="font-semibold text-foreground mb-2">Proyectos destacados:</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Servicios destacados:</h4>
                     <ul className="space-y-1">
                       {category.projects.map((project) => (
                         <li key={project} className="text-sm text-muted-foreground flex items-start">

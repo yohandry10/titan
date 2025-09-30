@@ -35,102 +35,39 @@ export default function EstructurasMetalicasPage() {
   const projects = [
     {
       title: "Ingeniería de detalle y planos de fabricación",
-      description: "Desarrollo de ingeniería especializada y documentación técnica para fabricación",
-      image: "/titan1.jpg",
-      details: [
-        "Planos de fabricación detallados",
-        "Cálculos estructurales especializados",
-        "Especificaciones técnicas precisas",
-        "Documentación para control de calidad",
-      ],
+      image: "/titan1.jpeg",
     },
     {
       title: "Cálculo y diseño de estructuras",
-      description: "Análisis estructural y diseño de elementos metálicos complejos",
       image: "/estructura.jpeg",
-      details: [
-        "Análisis de cargas y resistencia",
-        "Diseño sismorresistente",
-        "Optimización de materiales",
-        "Cumplimiento de normas técnicas",
-      ],
     },
     {
       title: "Montaje y alineamiento de estructuras",
-      description: "Montaje preciso y alineamiento de estructuras metálicas industriales",
       image: "/escalera1.jpeg",
-      details: [
-        "Montaje con equipos especializados",
-        "Alineamiento de alta precisión",
-        "Control topográfico continuo",
-        "Procedimientos de seguridad",
-      ],
     },
     {
       title: "Fabricación y montaje de estructuras",
-      description: "Proceso integral desde fabricación hasta montaje final",
       image: "/escalera.jpeg",
-      details: [
-        "Fabricación en taller especializado",
-        "Control de calidad en fabricación",
-        "Transporte y logística",
-        "Montaje en sitio",
-      ],
     },
     {
       title: "Fabricación e instalación de escaleras industriales",
-      description: "Escaleras, vigas, techos y pórticos para instalaciones industriales",
       image: "/escalera.png",
-      details: [
-        "Escaleras industriales certificadas",
-        "Vigas de acero estructural",
-        "Sistemas de techado metálico",
-        "Pórticos para naves industriales",
-      ],
     },
     {
       title: "Fabricación de chutes, guardas y coberturas",
-      description: "Elementos de protección y manejo de materiales industriales",
       image: "/nave.jpeg",
-      details: [
-        "Chutes para manejo de materiales",
-        "Guardas de seguridad industrial",
-        "Coberturas protectoras",
-        "Sistemas de contención",
-      ],
     },
     {
       title: "Construcción y montaje de naves industriales",
-      description: "Construcción completa de naves industriales de gran envergadura",
       image: "/Montaje.jpg",
-      details: [
-        "Naves industriales completas",
-        "Sistemas de ventilación",
-        "Estructuras de soporte",
-        "Acabados industriales",
-      ],
     },
     {
       title: "Soldadura especializada y certificada",
-      description: "Servicios de soldadura con certificaciones internacionales",
       image: "/metal.png",
-      details: [
-        "Soldadores certificados AWS",
-        "Procedimientos de soldadura calificados",
-        "Ensayos no destructivos",
-        "Control de calidad riguroso",
-      ],
     },
     {
       title: "Reforzamiento de estructuras existentes",
-      description: "Reforzamiento y rehabilitación de estructuras metálicas",
       image: "/estructura11.png",
-      details: [
-        "Evaluación estructural previa",
-        "Diseño de reforzamientos",
-        "Instalación sin interrumpir operaciones",
-        "Certificación de reforzamientos",
-      ],
     },
   ]
 
@@ -163,12 +100,7 @@ export default function EstructurasMetalicasPage() {
       {/* Projects Gallery */}
       <section ref={sectionRef} className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Proyectos Destacados</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Conoce algunos de nuestros proyectos más importantes en estructuras metálicas.
-            </p>
-          </div>
+
 
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
@@ -184,20 +116,7 @@ export default function EstructurasMetalicasPage() {
                     <h3 className="text-xl sm:text-2xl font-bold mb-2 line-clamp-2">{project.title}</h3>
                   </div>
                 </div>
-                <CardContent className="p-6 flex-1 flex flex-col">
-                  <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-3">Características del proyecto:</h4>
-                    <ul className="space-y-2">
-                      {project.details.map((detail, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
+
               </Card>
             ))}
           </div>

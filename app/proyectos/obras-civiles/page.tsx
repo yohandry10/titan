@@ -35,102 +35,39 @@ export default function ObrasCivilesPage() {
   const projects = [
     {
       title: "Excavaciones y movimiento de tierras",
-      description: "Movimiento masivo de tierras con maquinaria especializada y técnicas avanzadas",
       image: "/movi.jpeg",
-      details: [
-        "Excavación con maquinaria pesada especializada",
-        "Movimiento de grandes volúmenes de tierra",
-        "Nivelación y perfilado de terrenos",
-        "Control de compactación y densidad",
-      ],
     },
     {
       title: "Habilitación y mantenimiento de vías de acceso",
-      description: "Construcción y mantenimiento de vías de acceso para proyectos industriales y mineros",
       image: "/calle2.jpeg",
-      details: [
-        "Habilitación de nuevas vías de acceso",
-        "Mantenimiento preventivo y correctivo",
-        "Mejoramiento de vías existentes",
-        "Sistemas de drenaje y señalización",
-      ],
     },
     {
       title: "Construcción de vías de acceso",
-      description: "Construcción integral de vías vehiculares, carrozables y peatonales",
       image: "/mejoramiento.webp",
-      details: [
-        "Vías vehiculares para tráfico pesado",
-        "Vías carrozables para acceso industrial",
-        "Senderos peatonales seguros",
-        "Pavimentación y acabados especializados",
-      ],
     },
     {
       title: "Sistemas de evacuación de aguas pluviales",
-      description: "Construcción de sistemas de drenaje a canal abierto para manejo de aguas",
       image: "/3.jpg",
-      details: [
-        "Diseño hidráulico especializado",
-        "Excavación de canales de drenaje",
-        "Construcción de obras de arte",
-        "Sistemas de captación y conducción",
-      ],
     },
     {
       title: "Construcción de terraplenes y plataformas",
-      description: "Construcción de terraplenes y plataformas para infraestructura industrial",
       image: "/conasarc.jpg",
-      details: [
-        "Terraplenes para carreteras y accesos",
-        "Plataformas industriales niveladas",
-        "Muros de contención y estabilización",
-        "Compactación controlada por capas",
-      ],
     },
     {
       title: "Construcción de lozas y veredas de concreto",
-      description: "Construcción de estructuras de concreto para pavimentos y veredas",
       image: "/call3.jpeg",
-      details: [
-        "Lozas de concreto armado",
-        "Veredas peatonales durables",
-        "Acabados texturizados y lisos",
-        "Juntas de dilatación técnicas",
-      ],
     },
     {
       title: "Alcantarillado y saneamiento",
-      description: "Sistemas completos de alcantarillado y saneamiento para proyectos urbanos",
       image: "/losa.jpeg",
-      details: [
-        "Redes de alcantarillado sanitario",
-        "Sistemas de tratamiento de aguas",
-        "Cámaras de inspección y registro",
-        "Conexiones domiciliarias",
-      ],
     },
     {
       title: "Construcción de reservorios y mini represas",
-      description: "Construcción de estructuras para almacenamiento y control de agua",
       image: "/reservorio.jpg",
-      details: [
-        "Reservorios de agua potable",
-        "Mini represas para control hídrico",
-        "Sistemas de impermeabilización",
-        "Estructuras de control y válvulas",
-      ],
     },
     {
       title: "Construcción de complejos deportivos y recreativos",
-      description: "Desarrollo de infraestructura deportiva y recreativa para comunidades",
       image: "/complejo.jpg",
-      details: [
-        "Canchas deportivas multiuso",
-        "Áreas recreativas familiares",
-        "Gradería y espacios de espectadores",
-        "Iluminación y equipamiento deportivo",
-      ],
     },
   ]
 
@@ -150,7 +87,7 @@ export default function ObrasCivilesPage() {
               Volver a Servicios
             </Link>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Proyectos de <span className="text-primary">Obras Civiles</span>
+              Obras <span className="text-primary">Civiles</span>
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Especialistas en construcción de infraestructura civil con los más altos estándares de calidad y
@@ -164,12 +101,7 @@ export default function ObrasCivilesPage() {
       {/* Projects Gallery */}
       <section ref={sectionRef} className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Proyectos Destacados</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Conoce algunos de nuestros proyectos más importantes en obras civiles.
-            </p>
-          </div>
+
 
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
@@ -185,20 +117,7 @@ export default function ObrasCivilesPage() {
                     <h3 className="text-xl sm:text-2xl font-bold mb-2 line-clamp-2">{project.title}</h3>
                   </div>
                 </div>
-                <CardContent className="p-6 flex-1 flex flex-col">
-                  <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-3">Características del proyecto:</h4>
-                    <ul className="space-y-2">
-                      {project.details.map((detail, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
+
               </Card>
             ))}
           </div>

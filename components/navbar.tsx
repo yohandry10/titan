@@ -37,9 +37,9 @@ export default function Navbar() {
           {/* LOGO: pegado a la IZQUIERDA con margen negativo responsivo */}
           <a
             href="#inicio"
-            className="flex items-center group ml-[-48px] sm:ml-[-64px] md:ml-[-80px] lg:ml-[-96px] xl:ml-[-112px]"
+            className="flex items-center group ml-6 sm:ml-8 md:ml-10 lg:ml-12 xl:ml-16"
           >
-            <div className="relative w-[28rem] h-32 sm:w-[36rem] sm:h-36 md:w-[44rem] md:h-40 lg:w-[52rem] lg:h-44 xl:w-[60rem] xl:h-48 transition-transform duration-300 group-hover:scale-105 z-10">
+            <div className="relative w-32 h-12 sm:w-36 sm:h-14 md:w-40 md:h-16 lg:w-44 lg:h-18 xl:w-48 xl:h-20 transition-transform duration-300 group-hover:scale-105 z-10">
               <Image
                 src="/logo.png"
                 alt="Titan Soluciones"

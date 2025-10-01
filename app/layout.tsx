@@ -8,7 +8,7 @@ import Preloader from "@/components/preloader"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "TITAN Soluciones - Ingeniería, Construcción e Industria",
+  title: "TITAN - Ingeniería, Construcción y Mineria",
   description:
     "Empresa dedicada a la prestación de servicios en los sectores de minería, construcción e industria en Arequipa, Perú.",
   generator: "v0.app",

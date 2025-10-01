@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="/proyectos/estructuras-metalicas" className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base">
-                  Estructuras Metálicas
+                  Estructuras Metálicas y Metalmecánicas
                 </a>
               </li>
               <li>
@@ -57,11 +57,7 @@ export default function Footer() {
                   Servicios Misceláneos
                 </a>
               </li>
-              <li>
-                <a href="#servicios" className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base">
-                  Consultoría
-                </a>
-              </li>
+
             </ul>
           </div>
 
@@ -84,11 +80,7 @@ export default function Footer() {
                   Servicios
                 </a>
               </li>
-              <li>
-                <a href="/servicios" className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base">
-                  Proyectos
-                </a>
-              </li>
+
               <li>
                 <a href="#contacto" className="text-gray-300 hover:text-primary transition-colors text-sm sm:text-base">
                   Contacto
@@ -110,7 +102,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start justify-center sm:justify-start space-x-3">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
-                <div className="text-gray-300 text-sm sm:text-base">comercial@titansoluciones.com.pe</div>
+                <div className="text-gray-300 text-sm sm:text-base">comercial@titan.com.pe</div>
               </div>
               <div className="flex items-start justify-center sm:justify-start space-x-3">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -122,7 +114,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start justify-center sm:justify-start space-x-3">
                 <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
-                <div className="text-gray-300 text-sm sm:text-base">www.titansoluciones.com.pe</div>
+                <div className="text-gray-300 text-sm sm:text-base">www.titan.com.pe</div>
               </div>
             </div>
           </div>
@@ -131,7 +123,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-6 pt-4 flex flex-col sm:flex-row items-center justify-between">
           <div className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-0 text-center sm:text-left">
-            © 2025 TITAN Soluciones. Todos los derechos reservados.
+            © 2025 TITAN. Todos los derechos reservados.
           </div>
           <div className="flex space-x-4 sm:space-x-6 text-xs sm:text-sm">
             <a href="#" className="text-gray-300 hover:text-primary transition-colors">

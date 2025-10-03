@@ -75,7 +75,7 @@ export default function AboutSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 sm:mb-6">
             ¿Por qué elegir <span className="text-primary">TITAN SOLUCIONES</span>?
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-6xl mx-auto leading-relaxed px-4">
             Somos una empresa perteneciente al Grupo Vierdes, dedicada a brindar servicios en los sectores de minería, construcción e industria, 
             cumpliendo con los más altos estándares de seguridad, calidad y responsabilidad ambiental. Nos enfocamos en culminar cada proyecto con la 
             plena satisfacción de nuestros clientes, trabajando de manera socialmente responsable. Nuestro equipo multidisciplinario de profesionales 

@@ -492,6 +492,7 @@ body {
 /* Smooth scrolling for better UX */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Compensate for fixed navbar */
 }
 
 /* Prevent horizontal scroll on mobile */

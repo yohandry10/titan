@@ -130,9 +130,7 @@ export default function HeroSection() {
             className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up px-2"
             style={{ animationDelay: "0.4s" }}
           >
-            Somos una empresa dedicada a la prestación de servicios en los sectores de
-            <span className="text-primary font-medium"> minería, construcción e industria</span>, cumpliendo con los
-            más altos estándares de calidad y seguridad.
+            Obras civiles - Estructuras metálicas y metalmecánica – Misceláneos
           </p>
 
           {/* CTA Buttons */}

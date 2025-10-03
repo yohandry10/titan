@@ -12,10 +12,10 @@ export default function ServicesSection() {
 
   const projects = [
     {
-      title: "Vías de Acceso Mineras",
+      title: "Habilitación y mantenimiento de vías de acceso",
       category: "Obras Civiles",
       image: "/carretera-asfaltado.jpg",
-      description: "Construcción de vías de acceso vehiculares para operaciones mineras.",
+      description: "Construcción de vías de acceso vehiculares.",
     },
     {
       title: "Estructuras Industriales",
@@ -24,46 +24,46 @@ export default function ServicesSection() {
       description: "Fabricación e instalación de estructuras metálicas para naves industriales.",
     },
     {
-      title: "Montaje y alineamiento de estructuras",
+      title: "Construcción y montaje de naves industriales",
       category: "Estructuras Metálicas",
       image: "/Montaje.jpg",
-      description: "Servicios de soldadura certificada con estándares internacionales.",
+      description: "Montaje y alineamiento de estructuras con precisión, estabilidad y calidad garantizada.",
     },
     {
-      title: "Sistemas de Drenaje",
+      title: "Alcantarillado y saneamiento",
       category: "Obras Civiles",
       image: "/agua.jpg",
       description: "Construcción de sistemas de evacuación de aguas pluviales.",
     },
     {
-      title: "Servicios Eléctricos",
+      title: "Obras eléctricas para proyectos de sostenimiento",
       category: "Servicios Misceláneos",
-      image: "/electrica.png",
+      image: "/elec.png",
       description: "Instalaciones eléctricas industriales y sistemas de potencia.",
     },
     {
-      title: "Naves Industriales",
+      title: "Ingeniería de detalle y planos de fabricación",
       category: "Estructuras Metálicas",
-      image: "/nave.png",
-      description: "Construcción y montaje de naves industriales con estructuras metálicas.",
+      image: "/titan1.jpeg",
+      description: "Elaboración de planos técnicos y de fabricación con precisión.",
     },
     {
-      title: "Reservorios de Agua",
+      title: "Construcción de reservorios y mini represas",
       category: "Obras Civiles",
       image: "/reservorio.jpg",
       description: "Construcción de reservorios y sistemas de almacenamiento de agua.",
     },
     {
-      title: "Trabajos de Albañilería",
+      title: "Trabajos de albañilería, carpintería y gasfitería",
       category: "Servicios Misceláneos",
-      image: "/arbañileria.png",
+      image: "/metal.png",
       description: "Servicios especializados de albañilería y construcción civil.",
     },
     {
-      title: "Sistemas Drywall",
+      title: "Trabajos de instalación de pisos y montaje de techos",
       category: "Servicios Misceláneos",
       image: "/drywall.jpg",
-      description: "Instalación de sistemas de drywall y tabiquería moderna.",
+      description: "Instalación de pisos y montaje de techos con calidad garantizada.",
     },
   ]
 
@@ -155,12 +155,6 @@ export default function ServicesSection() {
                               e.currentTarget.src = '/placeholder.svg';
                             }}
                           />
-
-                          <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
-                            <span className="bg-primary text-white px-2 py-1 rounded text-xs font-medium">
-                              {project.category}
-                            </span>
-                          </div>
                         </div>
                         <CardContent className="p-4 sm:p-6 flex-1 flex flex-col">
                           <h3 className="text-lg sm:text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">

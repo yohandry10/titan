@@ -91,37 +91,18 @@ export default function SocialResponsibility() {
             </div>
           </div>
 
-          {/* Initiatives */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {initiatives.map((initiative, index) => (
-              <Card
-                key={initiative.title}
-                className="hover-lift scroll-reveal text-center group bg-white/95 backdrop-blur-sm border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-4 sm:p-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
-                    <initiative.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">{initiative.title}</h3>
-                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{initiative.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Image */}
-        <div className="mt-12 sm:mt-16 scroll-reveal">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
-            <img
-              src="/matas.png"
-              alt="Responsabilidad Social"
-              className="w-full h-48 sm:h-64 md:h-96 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-            <div className="absolute bottom-4 left-4 text-white">
-              <p className="text-sm sm:text-base font-medium">Construyendo un futuro sostenible juntos</p>
+          {/* Image */}
+          <div className="scroll-reveal">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+              <img
+                src="/matas.png"
+                alt="Responsabilidad Social"
+                className="w-full h-64 sm:h-80 md:h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm sm:text-base font-medium">Construyendo un futuro sostenible juntos</p>
+              </div>
             </div>
           </div>
         </div>

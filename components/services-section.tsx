@@ -18,10 +18,10 @@ export default function ServicesSection() {
       description: "Construcción de vías de acceso vehiculares.",
     },
     {
-      title: "Estructuras Industriales",
+      title: "Fabricación y montaje de estructuras",
       category: "Estructuras Metálicas",
-      image: "/INDUSTRIAL.png",
-      description: "Fabricación e instalación de estructuras metálicas para naves industriales.",
+      image: "/5.jpg",
+      description: "Fabricación y montaje de estructuras para naves industriales.",
     },
     {
       title: "Construcción y montaje de naves industriales",
@@ -155,6 +155,9 @@ export default function ServicesSection() {
                               e.currentTarget.src = '/placeholder.svg';
                             }}
                           />
+                          <div className="absolute top-3 left-3 bg-primary px-3 py-1.5 rounded-md shadow-lg">
+                            <span className="text-white text-xs sm:text-sm font-medium">{project.category}</span>
+                          </div>
                         </div>
                         <CardContent className="p-4 sm:p-6 flex-1 flex flex-col">
                           <h3 className="text-lg sm:text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">

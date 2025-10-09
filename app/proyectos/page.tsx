@@ -103,7 +103,7 @@ export default function ProyectosPage() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Nuestros Servicios
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-6xl mx-auto px-4">
               Obras civiles - Estructuras metálicas y metalmecánica – Misceláneos
             </p>
           </div>

@@ -35,11 +35,11 @@ export default function ObrasCivilesPage() {
   const projects = [
     {
       title: "Excavaciones y movimiento de tierras",
-      image: "/movi.jpeg",
+      image: "/tierras.jpg",
     },
     {
       title: "Habilitación y mantenimiento de vías de acceso",
-      image: "/calle2.jpeg",
+      image: "/carretera-asfaltado.jpg",
     },
     {
       title: "Construcción de vías de acceso",
@@ -59,7 +59,7 @@ export default function ObrasCivilesPage() {
     },
     {
       title: "Alcantarillado y saneamiento",
-      image: "/losa.jpeg",
+      image: "/agua.jpg",
     },
     {
       title: "Construcción de reservorios y mini represas",
